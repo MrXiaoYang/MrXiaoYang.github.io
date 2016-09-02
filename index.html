@@ -44,7 +44,7 @@
 				<h1 class="site-name"><a href="/" title="KeepOnline">KeepOnline</a></h1>
 				<h2 class="blog-motto">挂机打怪ing</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -78,6 +78,76 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/08/31/开发中用到的第三方框架/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-08-31T03:47:06.000Z" itemprop="datePublished"> 發表於 2016-08-31</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="1-KRVideoPlayer&#x6846;&#x67B6;-&#x64AD;&#x653E;&#x89C6;&#x9891;&#xFF08;&#x9002;&#x7528;&#x4E8E;&#x5168;&#x5C4F;&#x64AD;&#x653E;&#xFF09;"><a href="#1-KRVideoPlayer&#x6846;&#x67B6;-&#x64AD;&#x653E;&#x89C6;&#x9891;&#xFF08;&#x9002;&#x7528;&#x4E8E;&#x5168;&#x5C4F;&#x64AD;&#x653E;&#xFF09;" class="headerlink" title="1.KRVideoPlayer&#x6846;&#x67B6;  &#x64AD;&#x653E;&#x89C6;&#x9891;&#xFF08;&#x9002;&#x7528;&#x4E8E;&#x5168;&#x5C4F;&#x64AD;&#x653E;&#xFF09;"></a>1.KRVideoPlayer&#x6846;&#x67B6;  &#x64AD;&#x653E;&#x89C6;&#x9891;&#xFF08;&#x9002;&#x7528;&#x4E8E;&#x5168;&#x5C4F;&#x64AD;&#x653E;&#xFF09;</h3><p><code>&#x5728;&#x76D1;&#x542C;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x4E2D;</code></p>
+<p><code>pod &quot;KRVideoPlayer&quot;</code></p>
+<pre><code>- (IBAction)playRemoteVideo:(id)sender
+{//    demo &#x4E2D;&#x7684;&#x793A;&#x4F8B;&#x4EE3;&#x7801;
+    NSURL *videoURL = [NSURL URLWithString:@&quot;http://krtv.qiniudn.com/150522nextapp&quot;];
+
+if (!self.videoController) {
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = [UIScreen mainScreen].bounds.size.height;
+    self.videoController = [[KRVideoPlayerController alloc] initWithFrame:CGRectMake(0, 0, width, width*(9.0/16.0))];
+
+    __weak typeof(self)weakSelf = self;
+    [self.videoController setDimissCompleteBlock:^{
+        weakSelf.videoController = nil;
+    }];
+    [self.videoController showInWindow];
+}
+
+self.videoController.contentURL = videoURL;
+
+}
+</code></pre>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/08/31/使用hexo搭建个人博客/" title="hexo的搭建" itemprop="url">hexo的搭建</a>
   </h1>
   <p class="article-author">By
@@ -85,7 +155,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 发表于 2016-08-31</time>
+    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 發表於 2016-08-31</time>
     
   </p>
 </header>
@@ -198,55 +268,6 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/08/31/正则表达式/" title="正则表达式" itemprop="url">正则表达式</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 发表于 2016-08-31</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h5 id="1-&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;"><a href="#1-&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;" class="headerlink" title="1.&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;"></a>1.&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">+ (BOOL)isCardID:(NSString *)vText</div><div class="line"></div><div class="line">{</div><div class="line">    NSString* sxString =</div><div class="line">    @&quot;^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])((\\d{4})|\\d{3}[Xx])$&quot;;</div><div class="line"></div><div class="line">    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;, sxString];</div><div class="line">    </div><div class="line">    if([regextestmobile evaluateWithObject:vText]){</div><div class="line">        </div><div class="line">        NSArray *Wi = @[@&quot;7&quot;,@&quot;9&quot;,@&quot;10&quot;,@&quot;5&quot;,@&quot;8&quot;,@&quot;4&quot;,@&quot;2&quot;,@&quot;1&quot;,@&quot;6&quot;,@&quot;3&quot;,@&quot;7&quot;,@&quot;9&quot;,@&quot;10&quot;,@&quot;5&quot;,@&quot;8&quot;,@&quot;4&quot;,@&quot;2&quot;];</div><div class="line">        </div><div class="line">        NSInteger num = 0;</div><div class="line">        </div><div class="line">        for(int i = 0 ; i &lt; Wi.count ; i++){</div><div class="line">            </div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(i, 1)];</div><div class="line">            NSString *wiString = Wi[i];</div><div class="line">            num += [temp integerValue]*[wiString integerValue];</div><div class="line">            </div><div class="line">        }</div><div class="line">        </div><div class="line">        NSInteger result = num%11;</div><div class="line">        NSArray *y = @[@&quot;1&quot;,@&quot;0&quot;,@&quot;10&quot;,@&quot;9&quot;,@&quot;8&quot;,@&quot;7&quot;,@&quot;6&quot;,@&quot;5&quot;,@&quot;4&quot;,@&quot;3&quot;,@&quot;2&quot;];</div><div class="line">        </div><div class="line">        if(result == 2)</div><div class="line">        {</div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(17, 1)];</div><div class="line">            if([temp isEqualToString:@&quot;x&quot;]|| [temp isEqualToString:@&quot;X&quot;]) return YES;</div><div class="line">            else  return NO;</div><div class="line">            </div><div class="line">        }else{</div><div class="line">            </div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(17, 1)];</div><div class="line">            return  [temp isEqualToString:y[result]];</div><div class="line">            </div><div class="line">        }</div><div class="line">        </div><div class="line">    }else{</div><div class="line">        </div><div class="line">        return [regextestmobile evaluateWithObject:vText];</div><div class="line">        </div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
       <a href="/2016/08/31/Xcode快捷键/" title="Xcode应用程序的快捷方式" itemprop="url">Xcode应用程序的快捷方式</a>
   </h1>
   <p class="article-author">By
@@ -254,7 +275,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 发表于 2016-08-31</time>
+    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 發表於 2016-08-31</time>
     
   </p>
 </header>
@@ -305,6 +326,55 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/08/31/正则表达式/" title="正则表达式" itemprop="url">正则表达式</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 發表於 2016-08-31</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h5 id="1-&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;"><a href="#1-&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;" class="headerlink" title="1.&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;"></a>1.&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">+ (BOOL)isCardID:(NSString *)vText</div><div class="line"></div><div class="line">{</div><div class="line">    NSString* sxString =</div><div class="line">    @&quot;^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])((\\d{4})|\\d{3}[Xx])$&quot;;</div><div class="line"></div><div class="line">    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;, sxString];</div><div class="line">    </div><div class="line">    if([regextestmobile evaluateWithObject:vText]){</div><div class="line">        </div><div class="line">        NSArray *Wi = @[@&quot;7&quot;,@&quot;9&quot;,@&quot;10&quot;,@&quot;5&quot;,@&quot;8&quot;,@&quot;4&quot;,@&quot;2&quot;,@&quot;1&quot;,@&quot;6&quot;,@&quot;3&quot;,@&quot;7&quot;,@&quot;9&quot;,@&quot;10&quot;,@&quot;5&quot;,@&quot;8&quot;,@&quot;4&quot;,@&quot;2&quot;];</div><div class="line">        </div><div class="line">        NSInteger num = 0;</div><div class="line">        </div><div class="line">        for(int i = 0 ; i &lt; Wi.count ; i++){</div><div class="line">            </div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(i, 1)];</div><div class="line">            NSString *wiString = Wi[i];</div><div class="line">            num += [temp integerValue]*[wiString integerValue];</div><div class="line">            </div><div class="line">        }</div><div class="line">        </div><div class="line">        NSInteger result = num%11;</div><div class="line">        NSArray *y = @[@&quot;1&quot;,@&quot;0&quot;,@&quot;10&quot;,@&quot;9&quot;,@&quot;8&quot;,@&quot;7&quot;,@&quot;6&quot;,@&quot;5&quot;,@&quot;4&quot;,@&quot;3&quot;,@&quot;2&quot;];</div><div class="line">        </div><div class="line">        if(result == 2)</div><div class="line">        {</div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(17, 1)];</div><div class="line">            if([temp isEqualToString:@&quot;x&quot;]|| [temp isEqualToString:@&quot;X&quot;]) return YES;</div><div class="line">            else  return NO;</div><div class="line">            </div><div class="line">        }else{</div><div class="line">            </div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(17, 1)];</div><div class="line">            return  [temp isEqualToString:y[result]];</div><div class="line">            </div><div class="line">        }</div><div class="line">        </div><div class="line">    }else{</div><div class="line">        </div><div class="line">        return [regextestmobile evaluateWithObject:vText];</div><div class="line">        </div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/10/18/Xcode常用插件/" title="Xcode常用插件" itemprop="url">Xcode常用插件</a>
   </h1>
   <p class="article-author">By
@@ -312,7 +382,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-17T22:44:52.000Z" itemprop="datePublished"> 发表于 2015-10-18</time>
+    <time datetime="2015-10-17T22:44:52.000Z" itemprop="datePublished"> 發表於 2015-10-18</time>
     
   </p>
 </header>
@@ -355,10 +425,10 @@
 
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -369,7 +439,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">友情鏈接</p>
     <ul>
         
           <li>
@@ -391,7 +461,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
 </div>
 
   <div class="weiboshow">
@@ -545,7 +615,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
