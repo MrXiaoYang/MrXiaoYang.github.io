@@ -1,0 +1,1088 @@
+
+ <!DOCTYPE HTML>
+<html lang="zn-ch">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>KeepOnline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="MrXiaoYang">
+    
+
+    
+    <meta name="description" content="h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, Arial, sans-serif;
+    font-size: 13px;
+    line">
+<meta property="og:type" content="article">
+<meta property="og:title" content="KeepOnline">
+<meta property="og:url" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/index.html">
+<meta property="og:site_name" content="KeepOnline">
+<meta property="og:description" content="h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, Arial, sans-serif;
+    font-size: 13px;
+    line">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E5%AF%BC%E5%87%BAp12%E8%AF%81%E4%B9%A61.png">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E5%AF%BC%E5%87%BAp12%E8%AF%81%E4%B9%A62.png">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D1.png">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D2.png">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D3.png">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D4.png">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D5-%E6%B7%BB%E5%8A%A0%E5%90%8D%E9%A2%9D%E6%8F%90%E9%86%92.png">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E5%86%85%E8%B4%AD%E6%B5%81%E7%A8%8B%E5%9B%BE.png">
+<meta property="og:updated_time" content="2015-10-22T01:53:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="KeepOnline">
+<meta name="twitter:description" content="h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;Hiragino Sans GB&quot;, Arial, sans-serif;
+    font-size: 13px;
+    line">
+<meta name="twitter:image" content="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/./Device_Images/%E5%AF%BC%E5%87%BAp12%E8%AF%81%E4%B9%A61.png">
+
+    
+    <link rel="alternative" href="/atom.xml" title="KeepOnline" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="KeepOnline" title="KeepOnline"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="KeepOnline">KeepOnline</a></h1>
+				<h2 class="blog-motto">挂机打怪ing</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:MrXiaoYang.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/10/22/Xcode7-0之后的真机调试/真机相关/" title="" itemprop="url"></a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2015-10-22T01:53:42.000Z" itemprop="datePublished"> Published 2015-10-22</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">真机相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">一. 真机调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么是真机调试?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 为什么要运行到真机上, 不是可以运行到模拟器上吗?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 怎样做真机调试?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 真机调试注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 备注补充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 开发经验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">二. 打包测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 什么是打包测试?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 为什么要做打包测试?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 怎样进行打包测试?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text">三. 程序发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 什么是程序发布?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 为什么要程序发布?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 程序发布的步骤?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 经验补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.</span> <span class="toc-text">四. 内购和广告</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 什么是内购?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 为什么做内购?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 内购的产品类型?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. 广告</span></a></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #737373;
+    background-color: white;
+    margin: 10px 13px 10px 13px;
+}
+table {
+	margin: 10px 0 15px 0;
+	border-collapse: collapse;
+}
+td,th {	
+	border: 1px solid #ddd;
+	padding: 3px 10px;
+}
+th {
+	padding: 5px 10px;	
+}
+
+a {
+    color: #0069d6;
+}
+a:hover {
+    color: #0050a3;
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+p {
+    margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #404040;
+    line-height: 36px;
+}
+h1 {
+    margin-bottom: 18px;
+    font-size: 30px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+h5 {
+    font-size: 14px;
+}
+h6 {
+    font-size: 13px;
+}
+hr {
+    margin: 0 0 19px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+blockquote {
+    padding: 13px 13px 21px 15px;
+    margin-bottom: 18px;
+    font-family:georgia,serif;
+    font-style: italic;
+}
+blockquote:before {
+    content:"\201C";
+    font-size:40px;
+    margin-left:-10px;
+    font-family:georgia,serif;
+    color:#eee;
+}
+blockquote p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-bottom: 0;
+    font-style: italic;
+}
+code, pre {
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 11px;
+    border: 1px solid #d9d9d9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+pre code {
+    background-color: #fff;
+    color:#737373;
+    font-size: 11px;
+    padding: 0;
+}
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:10px auto;
+    }
+}
+@media print {
+	body,code,pre code,h1,h2,h3,h4,h5,h6 {
+		color: black;
+	}
+	table, pre {
+		page-break-inside: avoid;
+	}
+}
+</style>
+<title>&#x771F;&#x673A;&#x76F8;&#x5173;</title>
+
+</head>
+<body>
+<h1>&#x771F;&#x673A;&#x76F8;&#x5173;</h1>
+
+<hr>
+
+<hr>
+
+<h2>&#x4E00;. &#x771F;&#x673A;&#x8C03;&#x8BD5;</h2>
+
+<h3>1. &#x4EC0;&#x4E48;&#x662F;&#x771F;&#x673A;&#x8C03;&#x8BD5;?</h3>
+
+<pre><code>&#x7B80;&#x5355;&#x7406;&#x89E3;&#x5C31;&#x662F;&#x5C06;App&#x9879;&#x76EE;&#x8FD0;&#x884C;&#x5230;&#x771F;&#x673A;&#x4E0A;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;.
+</code></pre>
+
+<h3>2. &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x8FD0;&#x884C;&#x5230;&#x771F;&#x673A;&#x4E0A;, &#x4E0D;&#x662F;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x5230;&#x6A21;&#x62DF;&#x5668;&#x4E0A;&#x5417;?</h3>
+
+<pre><code>&#x771F;&#x673A;&#x548C;&#x6A21;&#x62DF;&#x5668;&#x73AF;&#x5883;&#x7684;&#x5DEE;&#x5F02;
+    &gt; &#x5185;&#x5B58;&#x73AF;&#x5883;,&#x7F51;&#x7EDC;&#x73AF;&#x5883;; 
+    &gt; &#x4F20;&#x611F;&#x5668;: &#x78C1;&#x529B;&#x8BA1;&#xFF0C;&#x9640;&#x87BA;&#x4EEA;&#xFF0C;&#x8DDD;&#x79BB;&#x4F20;&#x611F;&#x5668;&#x7B49;;
+    &gt; &#x7279;&#x5B9A;&#x529F;&#x80FD;&#xFF1A;&#x62CD;&#x7167;, &#x6253;&#x7535;&#x8BDD;&#xFF0C;&#x53D1;&#x77ED;&#x4FE1;&#xFF0C;&#x84DD;&#x7259;&#x7B49;&#x3002;
+    &gt; &#x7528;&#x6237;&#x4F53;&#x9A8C;&#x4E0D;&#x4E00;&#x6837;
+</code></pre>
+
+<p><strong>&#xA0;APP&#x53D1;&#x5E03;&#x4E4B;&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x505A;&#x771F;&#x673A;&#x8C03;&#x8BD5;&#xFF01;&#xFF01;&#xFF01;&#xA0;</strong></p>
+
+<h3>3. &#x600E;&#x6837;&#x505A;&#x771F;&#x673A;&#x8C03;&#x8BD5;?</h3>
+
+<ol>
+<li><p>Xcode7.0&#x4E4B;&#x524D;,&#x5E76;&#x4E0D;&#x662F;&#x4EFB;&#x4F55;&#x4EBA;,&#x4EFB;&#x4F55;&#x7535;&#x8111;,&#x4EFB;&#x4F55;APP,&#x4EFB;&#x4F55;&#x771F;&#x673A;&#x8BBE;&#x5907;&#x90FD;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x771F;&#x673A;&#x8C03;&#x8BD5;&#x7684;</p>
+
+<pre><code> 1. &#x9650;&#x5236;&#x4EBA;
+     &gt; &#x5FC5;&#x987B;&#x62E5;&#x6709;Apple ID([https://appleid.apple.com])
+     &gt; &#x52A0;&#x5165;&#x5F00;&#x53D1;&#x8005;&#x8BA1;&#x5212;,&#x5347;&#x7EA7;&#x4E3A;**&#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;**([https://developer.apple.com])
+ 2. &#x9650;&#x5236;&#x7535;&#x8111;
+     &gt; &#x914D;&#x7F6E;&#x4E0E;&#x7535;&#x8111;&#x5173;&#x8054;&#x7684;cer&#x8BC1;&#x4E66;
+         &#x9700;&#x8981;&#x4F7F;&#x7528;&#x9700;&#x8981;&#x771F;&#x673A;&#x8C03;&#x8BD5;&#x7684;&#x7535;&#x8111;,&#x751F;&#x6210;CSR&#x6587;&#x4EF6;
+         CSR&#x6587;&#x4EF6;: &#x8BC1;&#x4E66;&#x7B7E;&#x540D;&#x8BF7;&#x6C42;&#x6587;&#x4EF6;
+ 3. &#x9650;&#x5236;App
+     &gt; &#x914D;&#x7F6E;&#x9700;&#x8981;&#x771F;&#x673A;&#x6D4B;&#x8BD5;App&#x7684;BundleID
+         &#x533A;&#x5206;&#x4E0D;&#x540C;APP,&#x5C31;&#x662F;&#x901A;&#x8FC7;App&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;: BundleID
+ 4. &#x9650;&#x5236;&#x771F;&#x673A;&#x8BBE;&#x5907;
+     &gt; &#x914D;&#x7F6E;&#x9700;&#x8981;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x7684;&#x771F;&#x673A;UDID
+         &#x82F9;&#x679C;&#x6BCF;&#x53F0;&#x771F;&#x673A;&#x8BBE;&#x5907;&#x90FD;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x6807;&#x8BC6;:UDID
+</code></pre></li>
+<li><p>Xcode7.0&#x4E4B;&#x540E;, &#x505A;&#x771F;&#x673A;&#x8C03;&#x8BD5;, &#x975E;&#x5E38;&#x7B80;&#x5355; &#x53EA;&#x9700;&#x8981;&#x62E5;&#x6709;Apple ID&#x5373;&#x53EF;, &#x4E0D;&#x9700;&#x8981;&#x4EE5;&#x4E0A;&#x9650;&#x5236;</p></li>
+</ol>
+
+
+<h3>4. &#x771F;&#x673A;&#x8C03;&#x8BD5;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h3>
+
+<ol>
+<li><p>&#x4EE5;&#x4E0A;&#x6B65;&#x9AA4;&#x5B8C;&#x6210;&#x540E;,&#x4F60;&#x4F1A;&#x6709;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;:<em>cer&#x6587;&#x4EF6;</em>,<em>MobileProvision</em>&#x6587;&#x4EF6;,&#x53EA;&#x9700;&#x8981;&#x53CC;&#x51FB;&#x5B89;&#x88C5;&#x5373;&#x53EF;.</p>
+
+<pre><code> &gt; cer&#x8BC1;&#x4E66;&#x88AB;&#x6DFB;&#x52A0;&#x5230;&#x94A5;&#x5319;&#x4E32;&#x4E2D;
+ &gt; &#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x88AB;&#x5B89;&#x88C5;&#x5230;Xcode&#x4E2D;
+     &#x8D44;&#x6E90;&#x5E93; -&gt; MobileDevice -&gt; Provisioning Profiles
+</code></pre></li>
+<li><p>&#x5FC5;&#x987B;&#x4FDD;&#x8BC1;cer&#x8BC1;&#x4E66;&#x548C;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x4E00;&#x81F4;</p>
+
+<pre><code> Xcode -&gt; targets -&gt; build setting -&gt; code signing
+</code></pre></li>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;APP,&#x5E76;&#x786E;&#x8BA4;BundleID&#x4E0E;&#x914D;&#x7F6E;&#x4E00;&#x81F4;</p>
+
+<pre><code> &#x5982;&#x679C;&#x4E0D;&#x4E00;&#x81F4;, &#x4FEE;&#x6539;XCode&#x9879;&#x76EE;&#x7684;BundleID, &#x4E0E;&#x914D;&#x7F6E;&#x4E00;&#x81F4;.
+</code></pre></li>
+<li><p>&#x771F;&#x673A;&#x8FD0;&#x884C;&#x65F6;, &#x5982;&#x679C;&#x53D1;&#x73B0;&#x771F;&#x673A;&#x8BBE;&#x5907;&#x65E0;&#x6CD5;&#x9009;&#x4E2D;, &#x67E5;&#x770B;&#x9879;&#x76EE;&#x6700;&#x4F4E;&#x90E8;&#x7F72;&#x7248;&#x672C;&#x662F;&#x5426;&#x8FC7;&#x9AD8;, &#x5927;&#x4E8E;&#x771F;&#x673A;&#x8BBE;&#x5907;&#x7684;&#x7CFB;&#x7EDF;&#x7248;&#x672C;</p>
+
+<pre><code> &#x5982;&#x679C;&#x771F;&#x673A;&#x8BBE;&#x5907;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x8FC7;&#x9AD8;, &#x5219;&#x65E0;&#x6CD5;&#x9009;&#x4E2D;&#x771F;&#x673A;&#x8FDB;&#x884C;&#x8FD0;&#x884C;
+</code></pre></li>
+</ol>
+
+
+<h3>5. &#x5907;&#x6CE8;&#x8865;&#x5145;</h3>
+
+<ol>
+<li><p>&#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;&#x5206;&#x7C7B;</p>
+
+<pre><code> &gt; &#x4E2A;&#x4EBA;&#x8D26;&#x53F7;(99$)==688
+     &#x529F;&#x80FD;:&#x53EF;&#x4EE5;&#x771F;&#x673A;&#x8C03;&#x8BD5;, &#x6253;&#x5305;&#x6D4B;&#x8BD5;, &#x7A0B;&#x5E8F;&#x53D1;&#x5E03;. ::
+     &#x4F18;&#x70B9;:&#x7533;&#x8BF7;&#x901F;&#x5EA6;&#x5FEB;, &#x7ED9;&#x94B1;&#x5C31;&#x884C;, 1-3&#x4E2A;&#x5DE5;&#x4F5C;&#x65E5;&#x5373;&#x53EF; ::
+     &#x7F3A;&#x70B9;:
+         1&gt; iTunes&#x67E5;&#x770B;&#x5230;&#x7684;&#x662F;&#x4E2A;&#x4EBA;&#x4FE1;&#x606F;, &#x65E0;&#x6CD5;&#x95F4;&#x63A5;&#x4E3A;&#x516C;&#x53F8;&#x505A;&#x5BA3;&#x4F20; 
+         2&gt; &#x65E0;&#x6CD5;&#x521B;&#x5EFA;&#x7BA1;&#x7406;&#x81EA;&#x5DF1;&#x7684;&#x5F00;&#x53D1;&#x56E2;&#x961F;
+
+ &gt; &#x516C;&#x53F8;&#x8D26;&#x53F7;(99$)
+     &#x529F;&#x80FD;:&#x53EF;&#x4EE5;&#x771F;&#x673A;&#x8C03;&#x8BD5;, &#x6253;&#x5305;&#x6D4B;&#x8BD5;, &#x7A0B;&#x5E8F;&#x53D1;&#x5E03;. ::
+     &#x4F18;&#x70B9;:
+         1&gt; iTunes&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4F01;&#x4E1A;&#x4FE1;&#x606F;, &#x95F4;&#x63A5;&#x4E3A;&#x516C;&#x53F8;&#x505A;&#x5BA3;&#x4F20; 
+         2&gt; &#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x81EA;&#x5DF1;&#x7684;&#x5F00;&#x53D1;&#x56E2;&#x961F;
+     &#x7F3A;&#x70B9;:
+         1&gt; &#x7533;&#x8BF7;&#x590D;&#x6742;,&#x9700;&#x8981;&#x201D;&#x9093;&#x767D;&#x6C0F;&#x201D;&#x8BA4;&#x8BC1;
+         2&gt; &#x7533;&#x8BF7;&#x5468;&#x671F;&#x6BD4;&#x8F83;&#x957F;(&#x8FDE;&#x540C;&#x201D;&#x9093;&#x767D;&#x6C0F;&#x7F16;&#x7801;&#x201D;&#x7533;&#x8BF7;, &#x6700;&#x597D;&#x51C6;&#x5907;30&#x5929;&#x5DE6;&#x53F3;&#x65F6;&#x95F4;)
+
+ &gt; &#x4F01;&#x4E1A;&#x8D26;&#x53F7;(299$)
+     &#x529F;&#x80FD;:&#x53EF;&#x4EE5;&#x771F;&#x673A;&#x8C03;&#x8BD5;, &#x6253;&#x5305;&#x6D4B;&#x8BD5;
+     &#x4F18;&#x70B9;:
+         1&gt; &#x53EF;&#x4EE5;&#x5728;&#x4F01;&#x4E1A;&#x5185;&#x90E8;&#x968F;&#x610F;&#x5B89;&#x88C5;&#x5230;&#x82F9;&#x679C;&#x8BBE;&#x5907;,&#x4E0D;&#x9700;&#x8981;&#x7ECF;&#x8FC7;AppStore&#x5BA1;&#x6838;
+         2&gt; &#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x81EA;&#x5DF1;&#x7684;&#x5F00;&#x53D1;&#x56E2;&#x961F;
+         3&gt; &#x7248;&#x672C;&#x66F4;&#x65B0;&#x8FED;&#x4EE3;&#x6BD4;&#x8F83;&#x5FEB;, &#x4E0D;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x5BA1;&#x6838;
+     &#x7F3A;&#x70B9;:
+         1&gt; &#x7533;&#x8BF7;&#x590D;&#x6742;,&#x9700;&#x8981;&#x201D;&#x9093;&#x767D;&#x6C0F;&#x201D;&#x8BA4;&#x8BC1;
+         2&gt; &#x7533;&#x8BF7;&#x5468;&#x671F;&#x6BD4;&#x8F83;&#x957F;(&#x8FDE;&#x540C;&#x201D;&#x9093;&#x767D;&#x6C0F;&#x7F16;&#x7801;&#x201D;&#x7533;&#x8BF7;, &#x6700;&#x597D;&#x51C6;&#x5907;30&#x5929;&#x5DE6;&#x53F3;&#x65F6;&#x95F4;)
+         3&gt; &#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6B64;&#x8BC1;&#x4E66;,&#x5C06;App&#x53D1;&#x5E03;&#x5230;AppStore
+</code></pre></li>
+</ol>
+
+
+<h3>6. &#x5F00;&#x53D1;&#x7ECF;&#x9A8C;</h3>
+
+<ol>
+<li><p>&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4ECE;&#x7F51;&#x7EDC;&#x6E20;&#x9053;&#x4EE5;&#x53CA;&#x4EE3;&#x7533;&#x8BF7;&#x7684;&#x516C;&#x53F8;&#x53BB;&#x7533;&#x8BF7;&#x201D;&#x9093;&#x767D;&#x6C0F;&#x7F16;&#x7801;&#x201D;.</p>
+
+<pre><code>     * &#x82B1;&#x94B1;&#x591A;, &#x800C;&#x4E14;&#x7533;&#x8BF7;&#x4E0B;&#x6765;&#x7684;&#x201D;&#x9093;&#x767D;&#x6C0F;&#x7F16;&#x7801;&#x201D;&#x4E0D;&#x4E00;&#x5B9A;&#x548C;&#x82F9;&#x679C;&#x670D;&#x52A1;&#x5668;&#x6570;&#x636E;&#x5E93;&#x5185;&#x4E00;&#x81F4;, &#x6700;&#x7EC8;&#x4E0D;&#x53EF;&#x7528;; &#x6D6A;&#x8D39;&#x65F6;&#x95F4;&#x548C;&#x91D1;&#x94B1;
+     * &#x6700;&#x6B63;&#x786E;&#x7684;&#x505A;&#x6CD5;: &#x76F4;&#x63A5;&#x548C;&#x82F9;&#x679C;&#x5BA2;&#x670D;MM&#x8054;&#x7CFB;, &#x5979;&#x4EEC;&#x4F1A;&#x544A;&#x8BC9;&#x4F60;&#x7533;&#x8BF7;&#x6D41;&#x7A0B;, &#x9700;&#x8981;&#x63D0;&#x4EA4;&#x54EA;&#x4E9B;&#x6750;&#x6599;
+     * &#x5BA2;&#x670D;&#x7535;&#x8BDD;: 400 670 1855
+</code></pre></li>
+<li><p>&#x4F01;&#x4E1A;&#x7EA7;&#x8D26;&#x53F7;&#x4F7F;&#x7528;&#x573A;&#x666F;</p>
+
+<pre><code>     App&#x662F;&#x9488;&#x5BF9;&#x67D0;&#x4E00;&#x7279;&#x5B9A;&#x4EBA;&#x7FA4;&#x5236;&#x5B9A;&#x4F7F;&#x7528;.&#x53EA;&#x5728;&#x4F01;&#x4E1A;&#x5185;&#x90E8;&#x5B89;&#x88C5;, &#x65E0;&#x9700;&#x53D1;&#x5E03;&#x5230;AppStore&#x4F9B;&#x4ED6;&#x4EBA;&#x4E0B;&#x8F7D;
+</code></pre></li>
+<li><p>&#x771F;&#x673A;&#x8C03;&#x8BD5;&#x8BC1;&#x4E66;&#x53EA;&#x80FD;&#x751F;&#x6210;&#x4E24;&#x4E2A;!!</p>
+
+<p> <em>(&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;,&#x53EA;&#x80FD;&#x7ED1;&#x5B9A;&#x4E24;&#x53F0;&#x7535;&#x8111;&#x8FDB;&#x884C;&#x771F;&#x673A;&#x8C03;&#x8BD5;)</em></p>
+
+<p> <em>&#x6CE8;&#x610F;:&#x5982;&#x679C;&#x522B;&#x4EBA;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x4E86;&#x4E24;&#x4E2A;,&#x800C;&#x4E14;&#x6B63;&#x5728;&#x4F7F;&#x7528;,&#x4E0D;&#x80FD;&#x968F;&#x4FBF;&#x628A;&#x522B;&#x4EBA;&#x7684;&#x8BC1;&#x4E66;&#x5220;&#x9664;;</em></p>
+
+<pre><code> &#x89E3;&#x51B3;&#x65B9;&#x6848;:
+     &#x6B64;&#x65F6;&#x53EA;&#x80FD;&#x4F7F;&#x7528;&#x4ECE;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x8BC1;&#x4E66;&#x7684;&#x7535;&#x8111;&#x4E2D;,&#x5BFC;&#x51FA;P12&#x6587;&#x4EF6;,&#x8FDB;&#x884C;&#x5171;&#x4EAB;;
+ &#x4F5C;   &#x7528;: 
+     &#x8BA9;&#x5176;&#x4ED6;&#x7535;&#x8111;&#x8BBE;&#x5907;&#x4E0D;&#x9700;&#x8981;&#x751F;&#x6210;cer&#x8BC1;&#x4E66;,&#x4E5F;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x771F;&#x673A;&#x8C03;&#x8BD5;;
+</code></pre>
+
+<p> <em>&#x6B65;&#x9AA4;&#x56FE;&#x89E3;</em>
+ <img src="/2015/10/22/Xcode7-0&#x4E4B;&#x540E;&#x7684;&#x771F;&#x673A;&#x8C03;&#x8BD5;/&#x771F;&#x673A;&#x76F8;&#x5173;/./Device_Images/%E5%AF%BC%E5%87%BAp12%E8%AF%81%E4%B9%A61.png" alt="image"></p>
+
+<p> <img src="/2015/10/22/Xcode7-0&#x4E4B;&#x540E;&#x7684;&#x771F;&#x673A;&#x8C03;&#x8BD5;/&#x771F;&#x673A;&#x76F8;&#x5173;/./Device_Images/%E5%AF%BC%E5%87%BAp12%E8%AF%81%E4%B9%A62.png" alt="image"></p></li>
+<li><p>&#x6D4B;&#x8BD5;&#x7684;&#x771F;&#x673A;&#x8BBE;&#x5907;UDID&#x6700;&#x591A;&#x53EA;&#x80FD;&#x6DFB;&#x52A0;100&#x6B21;, &#x800C;&#x4E0D;&#x662F;100&#x53F0;</p>
+
+<p> <em>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;, &#x5982;&#x679C;&#x4F60;&#x52A0;&#x591F;&#x4E86;100&#x6B21;&#x4E4B;&#x540E;, &#x5373;&#x4F7F;&#x5220;&#x9664;&#x4E4B;&#x524D;&#x7684;&#x8BBE;&#x5907;&#x540D;&#x989D;, &#x4E5F;&#x65E0;&#x6CD5;&#x7EE7;&#x7EED;&#x6DFB;&#x52A0;</em></p>
+
+<pre><code> &#x82F9;&#x679C;&#x4F1A;&#x5728;&#x4E0B;&#x4E00;&#x5E74;, &#x7ED9;&#x4F60;&#x4E00;&#x6B21;&#x5220;&#x9664;&#x8BBE;&#x5907;&#x7684;&#x673A;&#x4F1A;, &#x4F60;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x4E00;&#x4E9B;&#x8BBE;&#x5907;, &#x6765;&#x6062;&#x590D;&#x4E00;&#x4E9B;&#x540D;&#x989D;.
+ &#x4F46;&#x662F;, &#x4E00;&#x65E6;&#x4F60;&#x6DFB;&#x52A0;&#x4E86;&#x8BBE;&#x5907;&#x540E;, &#x82F9;&#x679C;&#x5219;&#x89C6;&#x4E3A;&#x4F60;&#x81EA;&#x52A8;&#x653E;&#x5F03;&#x6DFB;&#x52A0;&#x8BBE;&#x5907;!!
+</code></pre>
+
+<p> <em>&#x6B65;&#x9AA4;&#x56FE;&#x89E3;(&#x4E00;&#x5E74;&#x624D;&#x80FD;&#x622A;&#x4E00;&#x6B21;&#x56FE;&#x5440;!!)</em></p>
+
+<p> <img src="/2015/10/22/Xcode7-0&#x4E4B;&#x540E;&#x7684;&#x771F;&#x673A;&#x8C03;&#x8BD5;/&#x771F;&#x673A;&#x76F8;&#x5173;/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D1.png" alt="image">
+ <img src="/2015/10/22/Xcode7-0&#x4E4B;&#x540E;&#x7684;&#x771F;&#x673A;&#x8C03;&#x8BD5;/&#x771F;&#x673A;&#x76F8;&#x5173;/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D2.png" alt="image">
+ <img src="/2015/10/22/Xcode7-0&#x4E4B;&#x540E;&#x7684;&#x771F;&#x673A;&#x8C03;&#x8BD5;/&#x771F;&#x673A;&#x76F8;&#x5173;/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D3.png" alt="image">
+ <img src="/2015/10/22/Xcode7-0&#x4E4B;&#x540E;&#x7684;&#x771F;&#x673A;&#x8C03;&#x8BD5;/&#x771F;&#x673A;&#x76F8;&#x5173;/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D4.png" alt="image">
+ <img src="/2015/10/22/Xcode7-0&#x4E4B;&#x540E;&#x7684;&#x771F;&#x673A;&#x8C03;&#x8BD5;/&#x771F;&#x673A;&#x76F8;&#x5173;/./Device_Images/%E9%87%8D%E7%BD%AE%E5%90%8D%E9%A2%9D5-%E6%B7%BB%E5%8A%A0%E5%90%8D%E9%A2%9D%E6%8F%90%E9%86%92.png" alt="image"></p></li>
+<li><p>&#x771F;&#x673A;&#x8C03;&#x8BD5;&#x6700;&#x7EC8;&#x9700;&#x8981;&#x7684;&#x6587;&#x4EF6;</p>
+
+<pre><code> &gt; cer&#x6587;&#x4EF6;(&#x6216;&#x8005;p12&#x6587;&#x4EF6;)
+ &gt; MobileProvision&#x6587;&#x4EF6;
+</code></pre></li>
+<li><p>XCode7&#x771F;&#x673A;&#x8C03;&#x8BD5;</p>
+
+<pre><code> &gt; &#x53EA;&#x9700;&#x8981;AppID,&#x5728;Xcode7 -&gt; preference -&gt; Account &#x4E2D;&#x6DFB;&#x52A0;&#x5373;&#x53EF;
+ &gt; &#x7136;&#x540E;&#x76F4;&#x63A5;&#x771F;&#x673A;&#x8C03;&#x8BD5;&#x65F6;,&#x4F1A;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x6846;,&#x63D0;&#x793A;&#x7F3A;&#x5C11;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;. &#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x201D;Fix issue&#x201D;&#x9009;&#x9879;,Xcode&#x4F1A;&#x81EA;&#x52A8;&#x8BF7;&#x6C42;&#x82F9;&#x679C;&#x670D;&#x52A1;&#x5668;&#x751F;&#x6210;&#x5BF9;&#x5E94;&#x7684;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;
+</code></pre>
+
+<p> ### <strong>&#x5177;&#x4F53;&#x7684;&#x6BCF;&#x4E00;&#x6B65;&#x9AA4;&#x622A;&#x56FE;, &#x8BF7;&#x53C2;&#x8003;&#x8BE6;&#x7EC6;&#x6B65;&#x9AA4;</strong></p></li>
+</ol>
+
+
+<hr>
+
+<h2>&#x4E8C;. &#x6253;&#x5305;&#x6D4B;&#x8BD5;</h2>
+
+<h3>1. &#x4EC0;&#x4E48;&#x662F;&#x6253;&#x5305;&#x6D4B;&#x8BD5;?</h3>
+
+<pre><code>    &#x5C31;&#x662F;&#x6307;&#x5C06;&#x9879;&#x76EE;&#x6253;&#x5305;&#x6210;&#x4E3A;.ipa&#x7684;&#x538B;&#x7F29;&#x5305;, &#x4F9B;&#x6307;&#x5B9A;&#x8BBE;&#x5907;&#x5B89;&#x88C5;&#x6D4B;&#x8BD5;.
+</code></pre>
+
+<h3>2. &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x505A;&#x6253;&#x5305;&#x6D4B;&#x8BD5;?</h3>
+
+<pre><code>    1. &#x5F53;&#x8FDB;&#x5165;&#x5230;&#x6D4B;&#x8BD5;&#x9636;&#x6BB5;, &#x9700;&#x8981;&#x4E13;&#x95E8;&#x7684;&#x6D4B;&#x8BD5;&#x4EBA;&#x5458;&#x5BF9;APP&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;, &#x6B64;&#x65F6;&#x9700;&#x8981;&#x5C06;APP&#x5B89;&#x88C5;&#x5230;&#x6D4B;&#x8BD5;&#x4EBA;&#x5458;&#x7684;&#x6D4B;&#x8BD5;&#x8BBE;&#x5907;&#x4E0A;, &#x6B64;&#x65F6;&#x6700;&#x4F73;&#x7684;&#x65B9;&#x6848;, &#x5C31;&#x662F;&#x76F4;&#x63A5;&#x5C06;&#x9879;&#x76EE;&#x6253;&#x5305;&#x6210;&#x4E3A;.ipa&#x5305;, &#x4F9B;&#x6D4B;&#x8BD5;&#x4EBA;&#x5458;&#x4E0B;&#x8F7D;&#x6D4B;&#x8BD5;;
+</code></pre>
+
+<h3>3. &#x600E;&#x6837;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;?</h3>
+
+<ol>
+<li><p>&#x9650;&#x5236;&#x4EBA;</p>
+
+<pre><code> &gt; &#x5FC5;&#x987B;&#x62E5;&#x6709;Apple ID([https://appleid.apple.com])
+ &gt; &#x52A0;&#x5165;&#x5F00;&#x53D1;&#x8005;&#x8BA1;&#x5212;,&#x5347;&#x7EA7;&#x4E3A;**&#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;**([https://developer.apple.com])
+</code></pre></li>
+<li><p>&#x9650;&#x5236;&#x7535;&#x8111;</p>
+
+<pre><code> &gt; &#x91CD;&#x65B0;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;**&#x6253;&#x5305;&#x6D4B;&#x8BD5;**&#x8BC1;&#x4E66;(Ad Hoc)
+     &#x9700;&#x8981;&#x4F7F;&#x7528;&#x9700;&#x8981;&#x6253;&#x5305;&#x6D4B;&#x8BD5;&#x7684;&#x7535;&#x8111;,&#x751F;&#x6210;CSR&#x6587;&#x4EF6;
+     CSR&#x6587;&#x4EF6;: &#x8BC1;&#x4E66;&#x7B7E;&#x540D;&#x8BF7;&#x6C42;&#x6587;&#x4EF6;
+</code></pre></li>
+<li><p>&#x9650;&#x5236;App</p>
+
+<pre><code> &gt; &#x914D;&#x7F6E;&#x9700;&#x8981;&#x771F;&#x673A;&#x6D4B;&#x8BD5;App&#x7684;BundleID
+     &#x533A;&#x5206;&#x4E0D;&#x540C;APP,&#x5C31;&#x662F;&#x901A;&#x8FC7;App&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;: BundleID
+</code></pre></li>
+<li><p>&#x9650;&#x5236;&#x771F;&#x673A;&#x8BBE;&#x5907;</p>
+
+<pre><code> &gt; &#x914D;&#x7F6E;&#x9700;&#x8981;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#x7684;&#x771F;&#x673A;UDID
+     &#x82F9;&#x679C;&#x6BCF;&#x53F0;&#x771F;&#x673A;&#x8BBE;&#x5907;&#x90FD;&#x62E5;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x6807;&#x8BC6;:UDID
+</code></pre></li>
+<li><p>&#x6839;&#x636E;2,3,4&#x91CD;&#x65B0;&#x751F;&#x6210;<strong>&#x6253;&#x5305;&#x6D4B;&#x8BD5;</strong>&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</p></li>
+<li><p>&#x5206;&#x522B;&#x5B89;&#x88C5;cer&#x8BC1;&#x4E66;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</p></li>
+<li><p>&#x8FD0;&#x884C;&#x8BBE;&#x5907;&#x9009;&#x62E9;&#x771F;&#x673A;&#x540E; &#x9009;&#x62E9;Product -&gt; Archive</p>
+
+<p> ### <strong>&#x5177;&#x4F53;&#x7684;&#x6BCF;&#x4E00;&#x6B65;&#x9AA4;&#x622A;&#x56FE;, &#x8BF7;&#x53C2;&#x8003;&#x8BE6;&#x7EC6;&#x6B65;&#x9AA4;</strong></p></li>
+</ol>
+
+
+<hr>
+
+<h2>&#x4E09;. &#x7A0B;&#x5E8F;&#x53D1;&#x5E03;</h2>
+
+<h3>1. &#x4EC0;&#x4E48;&#x662F;&#x7A0B;&#x5E8F;&#x53D1;&#x5E03;?</h3>
+
+<pre><code>    &#x5C31;&#x662F;&#x6307;&#x5C06;APP&#x53D1;&#x5E03;&#x5230;AppStore, &#x4F9B;&#x6307;&#x5B9A;&#x533A;&#x57DF;&#x7528;&#x6237;&#x4E0B;&#x8F7D;
+</code></pre>
+
+<h3>2. &#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7A0B;&#x5E8F;&#x53D1;&#x5E03;?</h3>
+
+<pre><code>    &#x4F60;&#x786E;&#x5B9A;&#x8981;&#x95EE;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;??? &#x597D;&#x5427;, &#x7B54;&#x6848;&#x662F;&#x8D5A;&#x94B1;.
+</code></pre>
+
+<h3>3. &#x7A0B;&#x5E8F;&#x53D1;&#x5E03;&#x7684;&#x6B65;&#x9AA4;?</h3>
+
+<ol>
+<li><p>&#x9650;&#x5236;&#x4EBA;</p>
+
+<pre><code> &gt; &#x5FC5;&#x987B;&#x62E5;&#x6709;Apple ID([https://appleid.apple.com])
+ &gt; &#x52A0;&#x5165;&#x5F00;&#x53D1;&#x8005;&#x8BA1;&#x5212;,&#x5347;&#x7EA7;&#x4E3A;**&#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;**([https://developer.apple.com])
+</code></pre></li>
+<li><p>&#x9650;&#x5236;&#x7535;&#x8111;</p>
+
+<pre><code> &gt; &#x91CD;&#x65B0;&#x914D;&#x7F6E;&#x4E00;&#x4E2A;**&#x53D1;&#x5E03;**&#x8BC1;&#x4E66;
+     &#x9700;&#x8981;&#x4F7F;&#x7528;&#x9700;&#x8981;&#x7A0B;&#x5E8F;&#x53D1;&#x5E03;&#x7684;&#x7535;&#x8111;,&#x751F;&#x6210;CSR&#x6587;&#x4EF6;
+     CSR&#x6587;&#x4EF6;: &#x8BC1;&#x4E66;&#x7B7E;&#x540D;&#x8BF7;&#x6C42;&#x6587;&#x4EF6;
+</code></pre></li>
+<li><p>&#x9650;&#x5236;App</p>
+
+<pre><code> &gt; &#x914D;&#x7F6E;&#x9700;&#x8981;&#x771F;&#x673A;&#x6D4B;&#x8BD5;App&#x7684;BundleID
+     &#x533A;&#x5206;&#x4E0D;&#x540C;APP,&#x5C31;&#x662F;&#x901A;&#x8FC7;App&#x7684;&#x552F;&#x4E00;&#x6807;&#x8BC6;: BundleID
+</code></pre></li>
+<li><p>&#x6839;&#x636E;2,3&#x91CD;&#x65B0;&#x751F;&#x6210;<strong>&#x53D1;&#x5E03;</strong>&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</p>
+
+<p> <strong>&#xA0;&#x6CE8;&#x610F;: &#x7A0B;&#x5E8F;&#x53D1;&#x5E03;, &#x662F;&#x53D1;&#x5E03;&#x5230;AppStore, &#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x6709;&#x9650;&#x5236;&#x8BBE;&#x5907;&#x4E00;&#x9879;</strong></p></li>
+<li><p>&#x5728;&#x5F00;&#x53D1;&#x4E2D;&#x5FC3;&#x65B0;&#x5EFA;App, &#x5E76;&#x586B;&#x5199;App&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;</p>
+
+<pre><code> &#x5C31;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x4E0B;&#x8F7D;&#x522B;&#x4EBA;&#x7684;app,&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x91CC;&#x9762;&#x6709;&#x9884;&#x89C8;&#x56FE;&#x7247;, app&#x7248;&#x672C;,&#x4EE5;&#x53CA;&#x529F;&#x80FD;&#x7B80;&#x4ECB;&#x7B49;&#x4FE1;&#x606F;, &#x90A3;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x90FD;&#x662F;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x4E00;&#x6B65;&#x586B;&#x5199;&#x7684;
+</code></pre></li>
+<li><p>&#x5199;&#x597D;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</p>
+
+<pre><code> &#x6CE8;&#x610F;:&#x5FC5;&#x987B;&#x8981;&#x6709;&#x7A0B;&#x5E8F;&#x56FE;&#x6807;,&#x542F;&#x52A8;&#x56FE;&#x7247;&#x7B49;,&#x5426;&#x5219;&#x4E0A;&#x4F20;&#x4F1A;&#x5931;&#x8D25;
+</code></pre></li>
+<li><p>&#x8FD0;&#x884C;&#x8BBE;&#x5907;&#x9009;&#x62E9;&#x771F;&#x673A;&#x540E; &#x9009;&#x62E9;Product -&gt; Archive</p></li>
+<li><p>&#x9009;&#x62E9; submit &#x6253;&#x5305;&#x9879;&#x76EE;,&#x4E0A;&#x4F20;&#x6784;&#x5EFA;&#x7248;&#x672C;</p></li>
+<li><p>&#x63D0;&#x4EA4;&#x5BA1;&#x6838;</p></li>
+</ol>
+
+
+<h3>4. &#x7ECF;&#x9A8C;&#x8865;&#x5145;</h3>
+
+<ol>
+<li><p>&#x5E38;&#x89C4;&#x5BA1;&#x6838;&#x5468;&#x671F;</p>
+
+<pre><code> &#x5BA1;&#x6838;&#x5468;&#x671F;2&#x81F3;20&#x5929;&#x4E0D;&#x7B49;, &#x800C;&#x4E14;&#x4ED6;&#x4EEC;&#x78B0;&#x5230;&#x8282;&#x5047;&#x65E5;&#x8FD8;&#x653E;&#x5047;.
+</code></pre></li>
+<li><p>&#x52A0;&#x6025;&#x5BA1;&#x6838;</p>
+
+<pre><code> &#x6982;&#x5FF5;: &#x7B80;&#x5355;&#x7406;&#x89E3;&#x5C31;&#x662F;&#x4F60;&#x8054;&#x7CFB;&#x82F9;&#x679C;&#x5BA1;&#x6838;&#x4EBA;&#x5458;,&#x8DDF;&#x4ED6;&#x4EEC;&#x8BF4;&#x660E;&#x7406;&#x7531;,&#x8BA9;&#x4ED6;&#x4EEC;&#x4F18;&#x5148;&#x7ED9;&#x4F60;&#x4EEC;&#x5BA1;&#x6838;
+ &#x5730;&#x5740;: [https://developer.apple.com/contact/app-store/?topic=expedite]
+</code></pre></li>
+<li><p>&#x52A0;&#x6025;&#x5BA1;&#x6838;&#x6CE8;&#x610F;&#x4E8B;&#x9879;(&#x4EB2;&#x8EAB;&#x4F53;&#x9A8C;)</p>
+
+<pre><code> &gt; &#x52A0;&#x6025;&#x5BA1;&#x6838;,&#x5BA1;&#x6838;&#x66F4;&#x52A0;&#x4E25;&#x683C;,&#x4EB2;&#x8EAB;&#x4F53;&#x9A8C;
+
+ &gt; &#x9996;&#x6B21;&#x53D1;&#x5E03;,&#x4E00;&#x822C;&#x52A0;&#x6025;&#x5BA1;&#x6838;&#x4E0D;&#x7ED9;&#x5BA1;&#x6279;
+
+ &gt; &#x52A0;&#x6025;&#x5BA1;&#x6838;&#x7533;&#x8BF7;&#x4E00;&#x5B9A;&#x8981;&#x7406;&#x7531;&#x8DB3;&#x591F;&#x5F3A;&#x5927;(&#x4E00;&#x822C;&#x662F;&#x4E0A;&#x7EBF;&#x540E;&#x53D1;&#x73B0;&#x91CD;&#x5927;Bug)
+
+ &gt; &#x52A0;&#x6025;&#x5BA1;&#x6838;&#x597D;&#x723D;, &#x53EA;&#x8981;&#x4F60;&#x7533;&#x8BF7;&#x52A0;&#x6025;&#x5BA1;&#x6838;&#x901A;&#x8FC7;&#x4E86;. &#x90A3;&#x4E48;&#x53EA;&#x8981;&#x4F60;&#x7684;app&#x6CA1;&#x6709;&#x4E0A;&#x67B6;,&#x5C31;&#x4F1A;&#x4E00;&#x76F4;&#x5904;&#x4E8E;&#x52A0;&#x6025;&#x5BA1;&#x6838;&#x72B6;&#x6001;, &#x4E00;&#x76F4;&#x5230;&#x4F60;&#x4E0A;&#x67B6;&#x4E3A;&#x6B62;, &#x6B64;&#x6B21;&#x52A0;&#x6025;&#x624D;&#x7B97;&#x7ED3;&#x675F;(&#x66FE;&#x7ECF;&#x6709;&#x8FDE;&#x7EED;&#x88AB;&#x62D2;7&#x6B21;&#x7ECF;&#x9A8C;,&#x5386;&#x65F6;&#x624D;10&#x5929;)
+
+ &gt; &#x52A0;&#x6025;&#x5BA1;&#x6838;&#x6709;&#x6B21;&#x6570;&#x9650;&#x5236;(&#x4E00;&#x5E74;&#x597D;&#x50CF;&#x6709;3&#x6B21;, &#x6211;&#x53EA;&#x7528;&#x8FC7;&#x4E00;&#x6B21;,&#x6CA1;&#x6D4B;&#x8BD5;&#x8FC7;)
+</code></pre>
+
+<p> <strong>&#x5177;&#x4F53;&#x6B65;&#x9AA4;, &#x8BF7;&#x67E5;&#x770B;&#x8BE6;&#x60C5;&#x7684;&#x6B65;&#x9AA4;&#x622A;&#x56FE;</strong></p></li>
+</ol>
+
+
+<hr>
+
+<h2>&#x56DB;. &#x5185;&#x8D2D;&#x548C;&#x5E7F;&#x544A;</h2>
+
+<h3>1. &#x4EC0;&#x4E48;&#x662F;&#x5185;&#x8D2D;?</h3>
+
+<pre><code>    &#x5185;&#x8D2D;&#x5C31;&#x662F;&#x6307;,&#x5728;APP&#x5185;&#x8D2D;&#x4E70;&#x67D0;&#x4E9B;&#x4EA7;&#x54C1;
+        &#x5982;&#x679C;&#x4F60;&#x5728;App&#x4E2D;&#x9500;&#x552E;&#x7684;&#x5546;&#x54C1;,&#x8DDF;App&#x6709;&#x5173;(&#x4F8B;&#x5982;&#x690D;&#x7269;&#x5927;&#x6218;&#x50F5;&#x5C38;&#x4E2D;&#x7684;&#x9053;&#x5177;,&#x9700;&#x8981;&#x5F00;&#x542F;&#x5173;&#x5361;,&#x62E5;&#x6709;&#x67D0;&#x79CD;&#x6280;&#x80FD;&#x7B49;&#x7B49;).&#x90A3;&#x4E48;,&#x82F9;&#x679C;&#x89C4;&#x5B9A;,&#x5FC5;&#x987B;&#x901A;&#x8FC7;&#x5185;&#x8D2D;&#x65B9;&#x5F0F;&#x8D2D;&#x4E70;.
+    &#x5185;&#x8D2D;&#x5206;&#x6210;: 3 : 7
+</code></pre>
+
+<h3>2. &#x4E3A;&#x4EC0;&#x4E48;&#x505A;&#x5185;&#x8D2D;?</h3>
+
+<pre><code>    1. &#x5F00;&#x53D1;&#x8005;&#x521B;&#x6536;&#x7684;&#x4E00;&#x79CD;&#x6A21;&#x5F0F;: free + &#x5185;&#x8D2D;
+    2. &#x67D0;&#x4E9B;&#x4E1A;&#x52A1;&#x5FC5;&#x987B;&#x4F7F;&#x7528;&#x5185;&#x8D2D;
+</code></pre>
+
+<h3>3. &#x5185;&#x8D2D;&#x7684;&#x4EA7;&#x54C1;&#x7C7B;&#x578B;?</h3>
+
+<ol>
+<li><p>&#x975E;&#x6D88;&#x8017;&#x54C1;(Nonconsumable)</p>
+
+<pre><code> &#x4E70;&#x4E86;&#x5C31;&#x4E00;&#x76F4;&#x6709;,&#x4E0D;&#x4F1A;&#x6D88;&#x8017;,&#x4F8B;&#x5982;&#x5F00;&#x542F;&#x5173;&#x5361;
+ &#x4E00;&#x822C;&#x6307;&#x7684;&#x662F;&#x5728;&#x6E38;&#x620F;&#x4E2D;&#x4E00;&#x6B21;&#x6027;&#x8D2D;&#x4E70;&#x5E76;&#x62E5;&#x6709;&#x6C38;&#x4E45;&#x8BBF;&#x95EE;&#x6743;&#x7684;&#x7269;&#x54C1;&#x6216;&#x670D;&#x52A1;&#x3002;&#x975E;&#x6D88;&#x8017;&#x54C1;&#x7269;&#x54C1;&#x53EF;&#x4EE5;&#x88AB;&#x7528;&#x6237;&#x518D;&#x6B21;&#x4E0B;&#x8F7D;&#xFF0C;&#x5E76;&#x4E14;&#x80FD;&#x591F;&#x5728;&#x7528;&#x6237;&#x7684;&#x6240;&#x6709;&#x8BBE;&#x5907;&#x4E0A;&#x4F7F;&#x7528;
+</code></pre></li>
+<li><p>&#x6D88;&#x8017;&#x54C1;(Consumable)</p>
+
+<pre><code> &#x4E70;&#x4E86;&#x5C31;&#x7528;&#xFF0C;&#x7528;&#x4E86;&#x5C31;&#x6CA1;
+ &#x4E13;&#x4E3A;&#x652F;&#x6301;&#x53EF;&#x6D88;&#x8017;&#x7684;&#x7269;&#x54C1;&#x6216;&#x670D;&#x52A1;&#x8BBE;&#x8BA1;&#x7684;&#xFF0C;&#x6D88;&#x8017;&#x54C1;&#x8D2D;&#x4E70;&#x4E0D;&#x53EF;&#x88AB;&#x518D;&#x6B21;&#x4E0B;&#x8F7D;&#xFF0C;&#x6839;&#x636E;&#x5176;&#x7279;&#x70B9;&#xFF0C;&#x6D88;&#x8017;&#x54C1;&#x4E0D;&#x80FD;&#x5728;&#x7528;&#x6237;&#x7684;&#x8BBE;&#x5907;&#x4E4B;&#x95F4;&#x8DE8;&#x8BBE;&#x5907;&#x4F7F;&#x7528;&#xFF0C;&#x9664;&#x975E;&#x81EA;&#x5B9A;&#x4E49;&#x670D;&#x52A1;&#x5728;&#x7528;&#x6237;&#x7684;&#x8D26;&#x53F7;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;
+</code></pre></li>
+<li><p>&#x5176;&#x4ED6;&#x7C7B;&#x578B;</p>
+
+<pre><code> &gt; &#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x7C7B;&#x522B;&#x5728;iBooks&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x76EE;&#x524D;iBooks&#x4E0D;&#x652F;&#x6301;&#x5927;&#x9646;&#x5E02;&#x573A;
+     &#x514D;&#x8D39;&#x8BA2;&#x9605;&#xFF08;Free subscriptions&#xFF09;
+     &#x81EA;&#x52A8;&#x7EED;&#x8D39;&#x8BA2;&#x9605;&#xFF08;Auto-renewing subscriptions&#xFF09;
+     &#x975E;&#x81EA;&#x52A8;&#x7EED;&#x8D39;&#x8BA2;&#x9605;&#xFF08;Nonrenewing subscriptions&#xFF09;
+</code></pre></li>
+<li><p>&#x5185;&#x8D2D;&#x7684;&#x6D41;&#x7A0B;
+ <em>&#x7C7B;&#x4F3C;&#x4E8E;&#x5546;&#x573A;&#x8D2D;&#x7269;&#x6D41;&#x7A0B;, &#x53C2;&#x7167;&#x4E0B;&#x56FE;</em>
+ <img src="/2015/10/22/Xcode7-0&#x4E4B;&#x540E;&#x7684;&#x771F;&#x673A;&#x8C03;&#x8BD5;/&#x771F;&#x673A;&#x76F8;&#x5173;/./Device_Images/%E5%86%85%E8%B4%AD%E6%B5%81%E7%A8%8B%E5%9B%BE.png" alt="image"></p></li>
+<li><p>&#x5185;&#x8D2D;&#x6F14;&#x7EC3;</p>
+
+<pre><code> 1. &#x5728;App&#x7BA1;&#x7406;&#x4E2D;&#x5FC3;,&#x521B;&#x5EFA;&#x4E00;&#x4E2A;App,&#x5E76;&#x586B;&#x5199;App&#x4FE1;&#x606F;
+     &#x6CE8;&#x610F;: &#x6B64;&#x5904;&#x521B;&#x5EFA;&#x7684;App&#x65F6;,&#x586B;&#x5199;&#x5957;&#x88C5;ID,&#x65F6;,&#x5FC5;&#x987B;&#x9009;&#x62E9;&#x53EF;&#x4EE5;&#x5185;&#x8D2D;&#x7684;&#x5957;&#x88C5;ID
+
+ 2. &#x521B;&#x5EFA;&#x5185;&#x8D2D;&#x5546;&#x54C1;,&#x5E76;&#x6DFB;&#x52A0;&#x5230;App,&#x6307;&#x5B9A;&#x6B64;App,&#x53EF;&#x4EE5;&#x9500;&#x552E;&#x54EA;&#x4E9B;&#x5546;&#x54C1;
+     &#x6CE8;&#x610F;: &#x521B;&#x5EFA;&#x5185;&#x8D2D;&#x5546;&#x54C1;&#x7684;&#x524D;&#x63D0;,&#x662F;&#x4F60;&#x5DF2;&#x7ECF;&#x586B;&#x5199;&#x4E86;&#x7A0E;&#x52A1;/&#x94F6;&#x884C;&#x4FE1;&#x606F;,&#x5426;&#x5219;&#x7684;&#x8BDD;,&#x65E0;&#x6CD5;&#x521B;&#x5EFA;
+
+ 3. &#x6DFB;&#x52A0;&#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x5185;&#x8D2D;&#x7684;&#x6D4B;&#x8BD5;&#x8D26;&#x53F7;
+
+ 4. &#x521B;&#x5EFA;App&#x9879;&#x76EE;,&#x5F00;&#x59CB;&#x5F00;&#x53D1;
+
+ 5. &#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x5185;&#x8D2D;&#x6D41;&#x7A0B;
+
+     (1) &#x4ECE;APP&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x6570;&#x636E;&#x5217;&#x8868;, &#x5E76;&#x884C;&#x82F9;&#x679C;&#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x53EF;&#x4EE5;&#x9500;&#x552E;&#x7684;&#x5546;&#x54C1;&#x5217;&#x8868;
+
+         [XMGDataTool getGoodsWithResult:^(NSArray *goods) {
+             NSArray *ids = [goods valueForKeyPath:@&quot;goodID&quot;];
+             // &#x8BF7;&#x6C42;&#x54EA;&#x4E9B;&#x5546;&#x54C1;&#x53EF;&#x4EE5;&#x5356;
+             NSSet *idSet = [NSSet setWithArray:ids];
+             SKProductsRequest *request = [[SKProductsRequest alloc] initWithProductIdentifiers:idSet];
+             request.delegate = self;
+             [request start];
+         }];
+
+     (2) &#x5728;&#x4EE3;&#x7406;&#x65B9;&#x6CD5;&#x4E2D;&#x83B7;&#x53D6;&#x5E76;&#x663E;&#x793A;&#x53EF;&#x9500;&#x552E;&#x5217;&#x8868;
+
+         - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response
+         {
+             self.products = response.products;
+         }
+
+     (3) &#x7528;&#x6237;&#x8D2D;&#x4E70;&#x5546;&#x54C1;, &#x5E76;&#x76D1;&#x542C;&#x5546;&#x54C1;&#x4EA4;&#x6613;&#x72B6;&#x6001;
+
+         // &#x53D6;&#x51FA;&#x5546;&#x54C1;
+         SKProduct *product = self.products[indexPath.row];
+
+         // &#x8D2D;&#x4E70;&#x5546;&#x54C1;
+         SKPayment *payMent = [SKPayment paymentWithProduct:product];
+
+         // &#x628A;&#x51ED;&#x8BC1;&#x52A0;&#x5165;&#x5230;&#x961F;&#x5217;, &#x7B49;&#x5F85;&#x7528;&#x6237;&#x4ED8;&#x6B3E;
+         [[SKPaymentQueue defaultQueue] addPayment:payMent];
+
+         // &#x8BBE;&#x7F6E;&#x76D1;&#x542C;&#x8005;, &#x76D1;&#x542C;&#x6574;&#x4E2A;&#x4EA4;&#x6613;&#x72B6;&#x6001;
+         [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+
+      (4) &#x5B9E;&#x73B0;&#x76D1;&#x542C;&#x4EA4;&#x6613;&#x72B6;&#x6001;&#x65B9;&#x6CD5;
+
+         // &#x4EA4;&#x6613;&#x72B6;&#x6001;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#x8C03;&#x7528;
+         - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray&lt;SKPaymentTransaction *&gt; *)transactions
+         {
+
+         [transactions enumerateObjectsUsingBlock:^(SKPaymentTransaction * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) 
+         {
+
+             //  SKPayment *payment , &#x5C0F;&#x7968; , &#x5305;&#x542B;&#x5546;&#x54C1;
+             //  SKPaymentTransactionState transactionState &#x4EA4;&#x6613;&#x72B6;&#x6001;
+         switch (obj.transactionState) {
+             case  SKPaymentTransactionStatePurchasing:
+                 NSLog(@&quot;&#x6B63;&#x5728;&#x4ED8;&#x6B3E;&quot;);
+             break;
+
+             case  SKPaymentTransactionStatePurchased:
+                 {
+                     NSLog(@&quot;&#x4ED8;&#x6B3E;&#x7ED3;&#x675F;&quot;);
+                     [queue finishTransaction:obj];
+                     break;
+                 }
+             case  SKPaymentTransactionStateFailed:
+                 {
+                     NSLog(@&quot;&#x4EA4;&#x6613;&#x5931;&#x8D25;&quot;);
+                     [queue finishTransaction:obj];
+                     break;
+                 }
+             case  SKPaymentTransactionStateRestored:
+                 NSLog(@&quot;&#x6062;&#x590D;&#x8D2D;&#x4E70;&quot;);
+                 break;
+             case SKPaymentTransactionStateDeferred:
+                 NSLog(@&quot;&#x63A8;&#x8FDF;&#x4ED8;&#x6B3E;&quot;);
+                 break;
+
+             default:
+                 break;
+         }
+        }];
+      }
+</code></pre>
+
+<p> <strong>&#x5177;&#x4F53;&#x6B65;&#x9AA4;, &#x8BF7;&#x53C2;&#x7167;&#x6B65;&#x9AA4;&#x622A;&#x56FE;&#x8BE6;&#x89E3;</strong></p></li>
+</ol>
+
+
+<h3>4. &#x5E7F;&#x544A;</h3>
+
+<ol>
+<li><p>&#x5E7F;&#x544A;&#x7684;&#x4F5C;&#x7528;?</p>
+
+<pre><code>  &#x5C5E;&#x4E8E;&#x521B;&#x6536;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;, &#x4F60;&#x5728;App&#x5185;&#x5C55;&#x793A;&#x5E7F;&#x544A;,&#x82F9;&#x679C;&#x4F1A;&#x4ED8;&#x8D39;&#x7ED9;&#x4F60;,&#x5206;&#x6210;&#x4ECE;&#x539F;&#x6765;&#x7684;4:6 &#x5230; 3:7
+</code></pre></li>
+<li><p>&#x5982;&#x4F55;&#x5C55;&#x793A;&#x5E7F;&#x544A;</p>
+
+<pre><code> - &#x5BFC;&#x5165;&#x6846;&#x67B6;: iAd.framework
+ - &#x6DFB;&#x52A0;&#x63A7;&#x4EF6;: ADBannerView 
+ - &#x5B9E;&#x73B0;&#x4EE3;&#x7406; ADBannerViewDelegate,&#x4F18;&#x5316;&#x7528;&#x6237;&#x4F53;&#x9A8C;
+</code></pre></li>
+</ol>
+
+</body>
+</html>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://MrXiaoYang.github.io/2015/10/22/Xcode7-0之后的真机调试/真机相关/" data-title="KeepOnline" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2016/08/31/Xcode快捷键/" title="Xcode应用程序的快捷方式">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Xcode应用程序的快捷方式</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/10/18/Xcode常用插件/"  title="Xcode常用插件">
+ <strong>下一篇：</strong><br/> 
+ <span>Xcode常用插件
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">真机相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.</span> <span class="toc-text">一. 真机调试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.1.</span> <span class="toc-text">1. 什么是真机调试?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.2.</span> <span class="toc-text">2. 为什么要运行到真机上, 不是可以运行到模拟器上吗?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.3.</span> <span class="toc-text">3. 怎样做真机调试?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.4.</span> <span class="toc-text">4. 真机调试注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.5.</span> <span class="toc-text">5. 备注补充</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.1.6.</span> <span class="toc-text">6. 开发经验</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.</span> <span class="toc-text">二. 打包测试</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. 什么是打包测试?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. 为什么要做打包测试?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 怎样进行打包测试?</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.</span> <span class="toc-text">三. 程序发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 什么是程序发布?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. 为什么要程序发布?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 程序发布的步骤?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. 经验补充</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.</span> <span class="toc-text">四. 内购和广告</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 什么是内购?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 为什么做内购?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. 内购的产品类型?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.4.4.</span> <span class="toc-text">4. 广告</span></a></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">Links</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">Weibo</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> “Who am i  !!!” <br/>
+			“Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu”</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="MrXiaoYang">MrXiaoYang</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
