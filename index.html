@@ -44,7 +44,7 @@
 				<h1 class="site-name"><a href="/" title="KeepOnline">KeepOnline</a></h1>
 				<h2 class="blog-motto">挂机打怪ing</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -60,7 +60,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:MrXiaoYang.github.io">
 					</form>
 					
@@ -78,6 +78,95 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/09/05/常量的定义/" title="常量的定义" itemprop="url">常量的定义</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-05T01:53:41.000Z" itemprop="datePublished"> Published 2016-09-05</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>XYConst.h&#x6587;&#x4EF6;&#x4E2D;&#x58F0;&#x660E;&#xFF08;&#x5B66;&#x4E60;&#x5B98;&#x65B9;&#x5E38;&#x91CF;&#x7684;&#x5B9A;&#x4E49;&#xFF09;</p>
+<pre><code>#import &lt;UIKit/UIKit.h&gt;
+
+/** &#x5BFC;&#x822A;&#x680F;&#x7684;&#x6700;&#x5927;Y&#x503C; */
+UIKIT_EXTERN CGFloat const XYNavMaxY;
+
+/** &#x6807;&#x9898;&#x680F;&#x7684;&#x9AD8;&#x5EA6; */
+UIKIT_EXTERN CGFloat const XYTitlesViewH;
+
+/** tabBar&#x7684;&#x9AD8;&#x5EA6; */
+UIKIT_EXTERN CGFloat const XYTabBarH;
+
+/** &#x5168;&#x5C40;&#x7EDF;&#x4E00;&#x7684;&#x95F4;&#x8DDD; */
+UIKIT_EXTERN CGFloat const XYMargin;
+
+/** tabbarbutton&#x91CD;&#x590D;&#x70B9;&#x51FB; */
+UIKIT_EXTERN NSString * const XYTabBarButtonDidClickRepeatNotification;
+
+/** &#x6807;&#x9898;&#x6309;&#x94AE;&#x91CD;&#x590D;&#x70B9;&#x51FB; */
+UIKIT_EXTERN NSString * const XYTitleButtonDidRepeatClick;
+</code></pre><p>XYConst.m&#x4E2D;&#x5B9E;&#x73B0;</p>
+<pre><code>#import &lt;UIKit/UIKit.h&gt;
+
+/** &#x5BFC;&#x822A;&#x680F;&#x7684;&#x6700;&#x5927;Y&#x503C; */
+CGFloat const XYNavMaxY = 64;
+
+/** &#x6807;&#x9898;&#x680F;&#x7684;&#x9AD8;&#x5EA6; */
+CGFloat const XYTitlesViewH = 35;
+
+/** tabBar&#x7684;&#x9AD8;&#x5EA6; */
+CGFloat const XYTabBarH = 49;
+
+/** &#x5168;&#x5C40;&#x7EDF;&#x4E00;&#x7684;&#x95F4;&#x8DDD; */
+CGFloat const XYMargin = 10;
+
+/** tabbarbutton&#x91CD;&#x590D;&#x70B9;&#x51FB; */
+NSString * const XYTabBarButtonDidClickRepeatNotification =     @&quot;XYTabBarButtonDidClickRepeatNotification&quot;;
+
+/** &#x6807;&#x9898;&#x6309;&#x94AE;&#x91CD;&#x590D;&#x70B9;&#x51FB; */
+NSString * const XYTitleButtonDidRepeatClick = @&quot;XYTitleButtonDidRepeatClick&quot;;    
+</code></pre>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/08/31/开发中用到的第三方框架/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
@@ -85,7 +174,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-31T03:47:06.000Z" itemprop="datePublished"> 發表於 2016-08-31</time>
+    <time datetime="2016-08-31T03:47:06.000Z" itemprop="datePublished"> Published 2016-08-31</time>
     
   </p>
 </header>
@@ -148,6 +237,64 @@ self.videoController.contentURL = videoURL;
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/08/31/Xcode快捷键/" title="Xcode应用程序的快捷方式" itemprop="url">Xcode应用程序的快捷方式</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> Published 2016-08-31</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="Xcode&#x76F8;&#x5173;&#xFF1A;"><a href="#Xcode&#x76F8;&#x5173;&#xFF1A;" class="headerlink" title="Xcode&#x76F8;&#x5173;&#xFF1A;"></a>Xcode&#x76F8;&#x5173;&#xFF1A;</h2><h3 id="&#x6253;&#x5F00;Xcode&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#xFF08;Preferences&#xFF09;-Command-&#xFF0B;-&#x9017;&#x53F7;&#xFF08;-&#xFF09;"><a href="#&#x6253;&#x5F00;Xcode&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#xFF08;Preferences&#xFF09;-Command-&#xFF0B;-&#x9017;&#x53F7;&#xFF08;-&#xFF09;" class="headerlink" title="&#x6253;&#x5F00;Xcode&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#xFF08;Preferences&#xFF09;      Command &#xFF0B; &#x9017;&#x53F7;&#xFF08;,&#xFF09;"></a>&#x6253;&#x5F00;Xcode&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#xFF08;Preferences&#xFF09;      <code>Command &#xFF0B; &#x9017;&#x53F7;&#xFF08;,&#xFF09;</code></h3><h3 id="&#x9690;&#x85CF;Xcode-Command-&#xFF0B;-H"><a href="#&#x9690;&#x85CF;Xcode-Command-&#xFF0B;-H" class="headerlink" title="&#x9690;&#x85CF;Xcode  Command &#xFF0B; H"></a>&#x9690;&#x85CF;Xcode  <code>Command &#xFF0B; H</code></h3><h3 id="&#x9690;&#x85CF;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x975E;&#x9F20;&#x6807;&#x5149;&#x6807;&#x6240;&#x6307;&#x6587;&#x4EF6;&#xFF09;-Command-&#xFF0B;-Alt-&#xFF0B;-H"><a href="#&#x9690;&#x85CF;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x975E;&#x9F20;&#x6807;&#x5149;&#x6807;&#x6240;&#x6307;&#x6587;&#x4EF6;&#xFF09;-Command-&#xFF0B;-Alt-&#xFF0B;-H" class="headerlink" title="&#x9690;&#x85CF;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x975E;&#x9F20;&#x6807;&#x5149;&#x6807;&#x6240;&#x6307;&#x6587;&#x4EF6;&#xFF09; Command &#xFF0B; Alt &#xFF0B; H"></a>&#x9690;&#x85CF;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x975E;&#x9F20;&#x6807;&#x5149;&#x6807;&#x6240;&#x6307;&#x6587;&#x4EF6;&#xFF09; <code>Command &#xFF0B; Alt &#xFF0B; H</code></h3><h3 id="&#x9000;&#x51FA;Xcode-Command-&#xFF0B;-Q"><a href="#&#x9000;&#x51FA;Xcode-Command-&#xFF0B;-Q" class="headerlink" title="&#x9000;&#x51FA;Xcode Command &#xFF0B; Q"></a>&#x9000;&#x51FA;Xcode <code>Command &#xFF0B; Q</code></h3><h2 id="&#x6587;&#x4EF6;&#x76F8;&#x5173;&#xFF1A;"><a href="#&#x6587;&#x4EF6;&#x76F8;&#x5173;&#xFF1A;" class="headerlink" title="&#x6587;&#x4EF6;&#x76F8;&#x5173;&#xFF1A;"></a>&#x6587;&#x4EF6;&#x76F8;&#x5173;&#xFF1A;</h2><h3 id="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x684C;&#x9762;-New-Tab-Command-T"><a href="#&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x684C;&#x9762;-New-Tab-Command-T" class="headerlink" title="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x684C;&#x9762;(New Tab)  Command + T"></a>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x684C;&#x9762;(New Tab)  <code>Command + T</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/1.png" alt="&#x56FE;&#x7247;"></p>
+<h3 id="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;-New-Window-&#x5F53;&#x524D;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x663E;&#x793A;-Shift-Command-T"><a href="#&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;-New-Window-&#x5F53;&#x524D;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x663E;&#x793A;-Shift-Command-T" class="headerlink" title="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;((New Window)&#x5F53;&#x524D;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x663E;&#x793A;) Shift + Command + T"></a>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;((New Window)&#x5F53;&#x524D;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x663E;&#x793A;) <code>Shift + Command + T</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/2.png" alt="&#x56FE;&#x7247;"> </p>
+<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;-New-File-Command-N"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;-New-File-Command-N" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;(New File) Command + N"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;(New File) <code>Command + N</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/3.png" alt="&#x56FE;&#x7247;"></p>
+<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;-New-Project-Shift-Command-N"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;-New-Project-Shift-Command-N" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;(New Project) Shift + Command + N"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;(New Project) <code>Shift + Command + N</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/4.png" alt="&#x56FE;&#x7247;"></p>
+<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5DE5;&#x7A0B;-New-Workspace-Ctrl-Command-N"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5DE5;&#x7A0B;-New-Workspace-Ctrl-Command-N" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5DE5;&#x7A0B;(New Workspace) Ctrl + Command + N"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5DE5;&#x7A0B;(New Workspace) <code>Ctrl + Command + N</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/5.png" alt="&#x56FE;&#x7247;"></p>
+<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x5939;-New-Group-Ctrl-Alt-N"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x5939;-New-Group-Ctrl-Alt-N" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x5939;(New Group) Ctrl + Alt + N"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x5939;(New Group) <code>Ctrl + Alt + N</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/6.png" alt="&#x56FE;&#x7247;"></p>
+<h3 id="&#x5FEB;&#x901F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939;-Command-O"><a href="#&#x5FEB;&#x901F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939;-Command-O" class="headerlink" title="&#x5FEB;&#x901F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939; Command + O"></a>&#x5FEB;&#x901F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939; <code>Command + O</code></h3><h3 id="&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x9879;&#x76EE;&#x4E2D;&#x7684;-h&#x6216;-m&#x6587;&#x4EF6;-Shift-Command-O"><a href="#&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x9879;&#x76EE;&#x4E2D;&#x7684;-h&#x6216;-m&#x6587;&#x4EF6;-Shift-Command-O" class="headerlink" title="&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x9879;&#x76EE;&#x4E2D;&#x7684;.h&#x6216;.m&#x6587;&#x4EF6; Shift + Command + O"></a>&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x9879;&#x76EE;&#x4E2D;&#x7684;.h&#x6216;.m&#x6587;&#x4EF6; <code>Shift + Command + O</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/7.png" alt="&#x56FE;&#x7247;"></p>
+<h3 id="&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F;-Command-0"><a href="#&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F;-Command-0" class="headerlink" title="&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F; Command + 0"></a>&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F; <code>Command + 0</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/8.png" alt="&#x56FE;&#x7247;"></p>
+<h3 id="&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F;-Command-Option-0"><a href="#&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F;-Command-Option-0" class="headerlink" title="&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F; Command + Option + 0"></a>&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F; <code>Command + Option + 0</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/9.png" alt="&#x56FE;&#x7247;"></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/08/31/使用hexo搭建个人博客/" title="hexo的搭建" itemprop="url">hexo的搭建</a>
   </h1>
   <p class="article-author">By
@@ -155,7 +302,7 @@ self.videoController.contentURL = videoURL;
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 發表於 2016-08-31</time>
+    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> Published 2016-08-31</time>
     
   </p>
 </header>
@@ -268,64 +415,6 @@ self.videoController.contentURL = videoURL;
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/08/31/Xcode快捷键/" title="Xcode应用程序的快捷方式" itemprop="url">Xcode应用程序的快捷方式</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 發表於 2016-08-31</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="Xcode&#x76F8;&#x5173;&#xFF1A;"><a href="#Xcode&#x76F8;&#x5173;&#xFF1A;" class="headerlink" title="Xcode&#x76F8;&#x5173;&#xFF1A;"></a>Xcode&#x76F8;&#x5173;&#xFF1A;</h2><h3 id="&#x6253;&#x5F00;Xcode&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#xFF08;Preferences&#xFF09;-Command-&#xFF0B;-&#x9017;&#x53F7;&#xFF08;-&#xFF09;"><a href="#&#x6253;&#x5F00;Xcode&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#xFF08;Preferences&#xFF09;-Command-&#xFF0B;-&#x9017;&#x53F7;&#xFF08;-&#xFF09;" class="headerlink" title="&#x6253;&#x5F00;Xcode&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#xFF08;Preferences&#xFF09;      Command &#xFF0B; &#x9017;&#x53F7;&#xFF08;,&#xFF09;"></a>&#x6253;&#x5F00;Xcode&#x504F;&#x597D;&#x8BBE;&#x7F6E;&#xFF08;Preferences&#xFF09;      <code>Command &#xFF0B; &#x9017;&#x53F7;&#xFF08;,&#xFF09;</code></h3><h3 id="&#x9690;&#x85CF;Xcode-Command-&#xFF0B;-H"><a href="#&#x9690;&#x85CF;Xcode-Command-&#xFF0B;-H" class="headerlink" title="&#x9690;&#x85CF;Xcode  Command &#xFF0B; H"></a>&#x9690;&#x85CF;Xcode  <code>Command &#xFF0B; H</code></h3><h3 id="&#x9690;&#x85CF;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x975E;&#x9F20;&#x6807;&#x5149;&#x6807;&#x6240;&#x6307;&#x6587;&#x4EF6;&#xFF09;-Command-&#xFF0B;-Alt-&#xFF0B;-H"><a href="#&#x9690;&#x85CF;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x975E;&#x9F20;&#x6807;&#x5149;&#x6807;&#x6240;&#x6307;&#x6587;&#x4EF6;&#xFF09;-Command-&#xFF0B;-Alt-&#xFF0B;-H" class="headerlink" title="&#x9690;&#x85CF;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x975E;&#x9F20;&#x6807;&#x5149;&#x6807;&#x6240;&#x6307;&#x6587;&#x4EF6;&#xFF09; Command &#xFF0B; Alt &#xFF0B; H"></a>&#x9690;&#x85CF;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF08;&#x975E;&#x5F53;&#x524D;&#x7A97;&#x53E3;&#x663E;&#x793A;&#x7684;&#x6587;&#x4EF6;&#x4E3A;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#xFF0C;&#x975E;&#x9F20;&#x6807;&#x5149;&#x6807;&#x6240;&#x6307;&#x6587;&#x4EF6;&#xFF09; <code>Command &#xFF0B; Alt &#xFF0B; H</code></h3><h3 id="&#x9000;&#x51FA;Xcode-Command-&#xFF0B;-Q"><a href="#&#x9000;&#x51FA;Xcode-Command-&#xFF0B;-Q" class="headerlink" title="&#x9000;&#x51FA;Xcode Command &#xFF0B; Q"></a>&#x9000;&#x51FA;Xcode <code>Command &#xFF0B; Q</code></h3><h2 id="&#x6587;&#x4EF6;&#x76F8;&#x5173;&#xFF1A;"><a href="#&#x6587;&#x4EF6;&#x76F8;&#x5173;&#xFF1A;" class="headerlink" title="&#x6587;&#x4EF6;&#x76F8;&#x5173;&#xFF1A;"></a>&#x6587;&#x4EF6;&#x76F8;&#x5173;&#xFF1A;</h2><h3 id="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x684C;&#x9762;-New-Tab-Command-T"><a href="#&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x684C;&#x9762;-New-Tab-Command-T" class="headerlink" title="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x684C;&#x9762;(New Tab)  Command + T"></a>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x684C;&#x9762;(New Tab)  <code>Command + T</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/1.png" alt="&#x56FE;&#x7247;"></p>
-<h3 id="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;-New-Window-&#x5F53;&#x524D;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x663E;&#x793A;-Shift-Command-T"><a href="#&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;-New-Window-&#x5F53;&#x524D;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x663E;&#x793A;-Shift-Command-T" class="headerlink" title="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;((New Window)&#x5F53;&#x524D;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x663E;&#x793A;) Shift + Command + T"></a>&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x7A97;&#x53E3;((New Window)&#x5F53;&#x524D;&#x9879;&#x76EE;&#x62F7;&#x8D1D;&#x4E00;&#x4EFD;&#x663E;&#x793A;) <code>Shift + Command + T</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/2.png" alt="&#x56FE;&#x7247;"> </p>
-<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;-New-File-Command-N"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;-New-File-Command-N" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;(New File) Command + N"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6587;&#x4EF6;(New File) <code>Command + N</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/3.png" alt="&#x56FE;&#x7247;"></p>
-<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;-New-Project-Shift-Command-N"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;-New-Project-Shift-Command-N" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;(New Project) Shift + Command + N"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x9879;&#x76EE;(New Project) <code>Shift + Command + N</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/4.png" alt="&#x56FE;&#x7247;"></p>
-<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5DE5;&#x7A0B;-New-Workspace-Ctrl-Command-N"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5DE5;&#x7A0B;-New-Workspace-Ctrl-Command-N" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5DE5;&#x7A0B;(New Workspace) Ctrl + Command + N"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5DE5;&#x7A0B;(New Workspace) <code>Ctrl + Command + N</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/5.png" alt="&#x56FE;&#x7247;"></p>
-<h3 id="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x5939;-New-Group-Ctrl-Alt-N"><a href="#&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x5939;-New-Group-Ctrl-Alt-N" class="headerlink" title="&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x5939;(New Group) Ctrl + Alt + N"></a>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x6587;&#x4EF6;&#x5939;(New Group) <code>Ctrl + Alt + N</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/6.png" alt="&#x56FE;&#x7247;"></p>
-<h3 id="&#x5FEB;&#x901F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939;-Command-O"><a href="#&#x5FEB;&#x901F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939;-Command-O" class="headerlink" title="&#x5FEB;&#x901F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939; Command + O"></a>&#x5FEB;&#x901F;&#x6253;&#x5F00;&#x4E00;&#x4E2A;&#x9009;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x5939; <code>Command + O</code></h3><h3 id="&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x9879;&#x76EE;&#x4E2D;&#x7684;-h&#x6216;-m&#x6587;&#x4EF6;-Shift-Command-O"><a href="#&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x9879;&#x76EE;&#x4E2D;&#x7684;-h&#x6216;-m&#x6587;&#x4EF6;-Shift-Command-O" class="headerlink" title="&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x9879;&#x76EE;&#x4E2D;&#x7684;.h&#x6216;.m&#x6587;&#x4EF6; Shift + Command + O"></a>&#x5FEB;&#x901F;&#x67E5;&#x627E;&#x9879;&#x76EE;&#x4E2D;&#x7684;.h&#x6216;.m&#x6587;&#x4EF6; <code>Shift + Command + O</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/7.png" alt="&#x56FE;&#x7247;"></p>
-<h3 id="&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F;-Command-0"><a href="#&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F;-Command-0" class="headerlink" title="&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F; Command + 0"></a>&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F; <code>Command + 0</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/8.png" alt="&#x56FE;&#x7247;"></p>
-<h3 id="&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F;-Command-Option-0"><a href="#&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F;-Command-Option-0" class="headerlink" title="&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F; Command + Option + 0"></a>&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F; <code>Command + Option + 0</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/9.png" alt="&#x56FE;&#x7247;"></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
       <a href="/2016/08/31/正则表达式/" title="正则表达式" itemprop="url">正则表达式</a>
   </h1>
   <p class="article-author">By
@@ -333,7 +422,7 @@ self.videoController.contentURL = videoURL;
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> 發表於 2016-08-31</time>
+    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> Published 2016-08-31</time>
     
   </p>
 </header>
@@ -382,7 +471,7 @@ self.videoController.contentURL = videoURL;
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-17T22:44:52.000Z" itemprop="datePublished"> 發表於 2015-10-18</time>
+    <time datetime="2015-10-17T22:44:52.000Z" itemprop="datePublished"> Published 2015-10-18</time>
     
   </p>
 </header>
@@ -425,10 +514,10 @@ self.videoController.contentURL = videoURL;
 
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -439,7 +528,7 @@ self.videoController.contentURL = videoURL;
   
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -461,11 +550,11 @@ self.videoController.contentURL = videoURL;
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
 </div>
 
@@ -615,7 +704,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
