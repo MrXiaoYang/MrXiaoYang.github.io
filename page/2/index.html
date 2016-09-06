@@ -549,7 +549,58 @@ if (!self.videoController) {
 self.videoController.contentURL = videoURL;
 
 }
-</code></pre>
+</code></pre><h3 id="2-BarrageRenderer&#x6846;&#x67B6;-&#x64AD;&#x653E;&#x89C6;&#x9891;&#xFF08;&#x4E00;&#x4E2A;-iOS-&#x4E0A;&#x7684;&#x5F00;&#x6E90;&#x5F39;&#x5E55;&#x6E32;&#x67D3;&#x5E93;&#xFF09;"><a href="#2-BarrageRenderer&#x6846;&#x67B6;-&#x64AD;&#x653E;&#x89C6;&#x9891;&#xFF08;&#x4E00;&#x4E2A;-iOS-&#x4E0A;&#x7684;&#x5F00;&#x6E90;&#x5F39;&#x5E55;&#x6E32;&#x67D3;&#x5E93;&#xFF09;" class="headerlink" title="2.BarrageRenderer&#x6846;&#x67B6;  &#x64AD;&#x653E;&#x89C6;&#x9891;&#xFF08;&#x4E00;&#x4E2A; iOS &#x4E0A;&#x7684;&#x5F00;&#x6E90;&#x5F39;&#x5E55;&#x6E32;&#x67D3;&#x5E93;&#xFF09;"></a>2.BarrageRenderer&#x6846;&#x67B6;  &#x64AD;&#x653E;&#x89C6;&#x9891;&#xFF08;&#x4E00;&#x4E2A; iOS &#x4E0A;&#x7684;&#x5F00;&#x6E90;&#x5F39;&#x5E55;&#x6E32;&#x67D3;&#x5E93;&#xFF09;</h3><p><a href="https://github.com/unash/BarrageRenderer" target="_blank" rel="external">github&#x94FE;&#x63A5;</a></p>
+<p><img src="/2016/08/31/&#x5F00;&#x53D1;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x6846;&#x67B6;/BarrageRendererDemo.gif" alt="&#x5F39;&#x5E55;&#x6548;&#x679C;&#x56FE;"></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/08/31/正则表达式/" title="正则表达式" itemprop="url">正则表达式</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> Published 2016-08-31</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h5 id="1-&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;"><a href="#1-&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;" class="headerlink" title="1.&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;"></a>1.&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">+ (BOOL)isCardID:(NSString *)vText</div><div class="line"></div><div class="line">{</div><div class="line">    NSString* sxString =</div><div class="line">    @&quot;^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])((\\d{4})|\\d{3}[Xx])$&quot;;</div><div class="line"></div><div class="line">    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;, sxString];</div><div class="line">    </div><div class="line">    if([regextestmobile evaluateWithObject:vText]){</div><div class="line">        </div><div class="line">        NSArray *Wi = @[@&quot;7&quot;,@&quot;9&quot;,@&quot;10&quot;,@&quot;5&quot;,@&quot;8&quot;,@&quot;4&quot;,@&quot;2&quot;,@&quot;1&quot;,@&quot;6&quot;,@&quot;3&quot;,@&quot;7&quot;,@&quot;9&quot;,@&quot;10&quot;,@&quot;5&quot;,@&quot;8&quot;,@&quot;4&quot;,@&quot;2&quot;];</div><div class="line">        </div><div class="line">        NSInteger num = 0;</div><div class="line">        </div><div class="line">        for(int i = 0 ; i &lt; Wi.count ; i++){</div><div class="line">            </div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(i, 1)];</div><div class="line">            NSString *wiString = Wi[i];</div><div class="line">            num += [temp integerValue]*[wiString integerValue];</div><div class="line">            </div><div class="line">        }</div><div class="line">        </div><div class="line">        NSInteger result = num%11;</div><div class="line">        NSArray *y = @[@&quot;1&quot;,@&quot;0&quot;,@&quot;10&quot;,@&quot;9&quot;,@&quot;8&quot;,@&quot;7&quot;,@&quot;6&quot;,@&quot;5&quot;,@&quot;4&quot;,@&quot;3&quot;,@&quot;2&quot;];</div><div class="line">        </div><div class="line">        if(result == 2)</div><div class="line">        {</div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(17, 1)];</div><div class="line">            if([temp isEqualToString:@&quot;x&quot;]|| [temp isEqualToString:@&quot;X&quot;]) return YES;</div><div class="line">            else  return NO;</div><div class="line">            </div><div class="line">        }else{</div><div class="line">            </div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(17, 1)];</div><div class="line">            return  [temp isEqualToString:y[result]];</div><div class="line">            </div><div class="line">        }</div><div class="line">        </div><div class="line">    }else{</div><div class="line">        </div><div class="line">        return [regextestmobile evaluateWithObject:vText];</div><div class="line">        </div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
         
         
         <p class="article-more-link">
@@ -728,55 +779,6 @@ self.videoController.contentURL = videoURL;
 <h3 id="&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F;-Command-0"><a href="#&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F;-Command-0" class="headerlink" title="&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F; Command + 0"></a>&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5BFC;&#x822A;&#x5668;&#x9762;&#x677F; <code>Command + 0</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/8.png" alt="&#x56FE;&#x7247;"></p>
 <h3 id="&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F;-Command-Option-0"><a href="#&#x663E;&#x793A;-&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F;-Command-Option-0" class="headerlink" title="&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F; Command + Option + 0"></a>&#x663E;&#x793A;/&#x9690;&#x85CF;&#x5B9E;&#x7528;&#x5DE5;&#x5177;&#x9762;&#x677F; <code>Command + Option + 0</code></h3><p><img src="/2016/08/31/Xcode&#x5FEB;&#x6377;&#x952E;/9.png" alt="&#x56FE;&#x7247;"></p>
 
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/08/31/正则表达式/" title="正则表达式" itemprop="url">正则表达式</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-08-31T03:12:57.000Z" itemprop="datePublished"> Published 2016-08-31</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h5 id="1-&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;"><a href="#1-&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;" class="headerlink" title="1.&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;"></a>1.&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x4E3A;&#x8EAB;&#x4EFD;&#x8BC1;&#x53F7;&#x7801;</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">+ (BOOL)isCardID:(NSString *)vText</div><div class="line"></div><div class="line">{</div><div class="line">    NSString* sxString =</div><div class="line">    @&quot;^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])((\\d{4})|\\d{3}[Xx])$&quot;;</div><div class="line"></div><div class="line">    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;, sxString];</div><div class="line">    </div><div class="line">    if([regextestmobile evaluateWithObject:vText]){</div><div class="line">        </div><div class="line">        NSArray *Wi = @[@&quot;7&quot;,@&quot;9&quot;,@&quot;10&quot;,@&quot;5&quot;,@&quot;8&quot;,@&quot;4&quot;,@&quot;2&quot;,@&quot;1&quot;,@&quot;6&quot;,@&quot;3&quot;,@&quot;7&quot;,@&quot;9&quot;,@&quot;10&quot;,@&quot;5&quot;,@&quot;8&quot;,@&quot;4&quot;,@&quot;2&quot;];</div><div class="line">        </div><div class="line">        NSInteger num = 0;</div><div class="line">        </div><div class="line">        for(int i = 0 ; i &lt; Wi.count ; i++){</div><div class="line">            </div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(i, 1)];</div><div class="line">            NSString *wiString = Wi[i];</div><div class="line">            num += [temp integerValue]*[wiString integerValue];</div><div class="line">            </div><div class="line">        }</div><div class="line">        </div><div class="line">        NSInteger result = num%11;</div><div class="line">        NSArray *y = @[@&quot;1&quot;,@&quot;0&quot;,@&quot;10&quot;,@&quot;9&quot;,@&quot;8&quot;,@&quot;7&quot;,@&quot;6&quot;,@&quot;5&quot;,@&quot;4&quot;,@&quot;3&quot;,@&quot;2&quot;];</div><div class="line">        </div><div class="line">        if(result == 2)</div><div class="line">        {</div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(17, 1)];</div><div class="line">            if([temp isEqualToString:@&quot;x&quot;]|| [temp isEqualToString:@&quot;X&quot;]) return YES;</div><div class="line">            else  return NO;</div><div class="line">            </div><div class="line">        }else{</div><div class="line">            </div><div class="line">            NSString *temp = [vText substringWithRange:NSMakeRange(17, 1)];</div><div class="line">            return  [temp isEqualToString:y[result]];</div><div class="line">            </div><div class="line">        }</div><div class="line">        </div><div class="line">    }else{</div><div class="line">        </div><div class="line">        return [regextestmobile evaluateWithObject:vText];</div><div class="line">        </div><div class="line">    }</div><div class="line">}</div></pre></td></tr></table></figure>
         
         
         <p class="article-more-link">
