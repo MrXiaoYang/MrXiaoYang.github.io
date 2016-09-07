@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>自定义控件的frame | KeepOnline</title>
+    <title>GIT终端命令 | KeepOnline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="MrXiaoYang">
     
 
     
-    <meta name="description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384#import &amp;lt;UIKit/UIKit.h&amp;gt;@interface U">
-<meta property="og:type" content="article">
-<meta property="og:title" content="自定义控件的frame">
-<meta property="og:url" content="http://MrXiaoYang.github.io/2016/09/05/自定义frame/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="GIT终端命令">
+<meta property="og:url" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/index.html">
 <meta property="og:site_name" content="KeepOnline">
-<meta property="og:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384#import &amp;lt;UIKit/UIKit.h&amp;gt;@interface U">
-<meta property="og:updated_time" content="2016-09-05T04:03:07.000Z">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.png">
+<meta property="og:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.pdf">
+<meta property="og:updated_time" content="2016-09-07T01:39:51.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="自定义控件的frame">
-<meta name="twitter:description" content="123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384#import &amp;lt;UIKit/UIKit.h&amp;gt;@interface U">
+<meta name="twitter:title" content="GIT终端命令">
+<meta name="twitter:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.png">
 
     
     <link rel="alternative" href="/atom.xml" title="KeepOnline" type="application/atom+xml">
@@ -80,14 +80,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/05/自定义frame/" title="自定义控件的frame" itemprop="url">自定义控件的frame</a>
+      <a href="/2016/09/07/GIT终端命令/" title="GIT终端命令" itemprop="url">GIT终端命令</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-05T04:00:29.000Z" itemprop="datePublished"> 发表于 2016-09-05</time>
+    <time datetime="2016-09-07T01:38:04.000Z" itemprop="datePublished"> 发表于 2016-09-07</time>
     
   </p>
 </header>
@@ -100,7 +100,8 @@
 		
 		</div>
 		
-		<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line">#import &lt;UIKit/UIKit.h&gt;</div><div class="line"></div><div class="line">@interface UIView (Frame)</div><div class="line"></div><div class="line">@property (nonatomic, assign) CGFloat xy_x;</div><div class="line">@property (nonatomic, assign) CGFloat xy_y;</div><div class="line">@property (nonatomic, assign) CGFloat xy_width;</div><div class="line">@property (nonatomic, assign) CGFloat xy_height;</div><div class="line">@property (nonatomic, assign) CGFloat centerX;</div><div class="line">@property (nonatomic, assign) CGFloat centerY;</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">#import &quot;UIView+Frame.h&quot;</div><div class="line"></div><div class="line">@implementation UIView (Frame)</div><div class="line"></div><div class="line">- (void)setXy_x:(CGFloat)xy_x</div><div class="line">{</div><div class="line">    CGRect frame = self.frame;</div><div class="line">    frame.origin.x = xy_x;</div><div class="line">    self.frame = frame;</div><div class="line">}</div><div class="line">- (CGFloat)xy_x</div><div class="line">{</div><div class="line">    return self.frame.origin.x;</div><div class="line">}</div><div class="line"></div><div class="line">- (void)setXy_y:(CGFloat)xy_y</div><div class="line">{</div><div class="line">    CGRect frame = self.frame;</div><div class="line">    frame.origin.y = xy_y;</div><div class="line">    self.frame = frame;</div><div class="line">}</div><div class="line">- (CGFloat)xy_y</div><div class="line">{</div><div class="line">    return self.frame.origin.y;</div><div class="line">}</div><div class="line"></div><div class="line">- (void)setXy_width:(CGFloat)xy_width</div><div class="line">{</div><div class="line">    CGRect frame = self.frame;</div><div class="line">    frame.size.width = xy_width;</div><div class="line">    self.frame = frame;</div><div class="line">}</div><div class="line">- (CGFloat)xy_width</div><div class="line">{</div><div class="line">    return self.frame.size.width;</div><div class="line">}</div><div class="line"></div><div class="line">- (void)setXy_height:(CGFloat)xy_height</div><div class="line">{</div><div class="line">    CGRect frame = self.frame;</div><div class="line">    frame.size.height = xy_height;</div><div class="line">    self.frame = frame;</div><div class="line">}</div><div class="line">- (CGFloat)xy_height</div><div class="line">{</div><div class="line">    return self.frame.size.height;</div><div class="line">}</div><div class="line"></div><div class="line">- (void)setCenterX:(CGFloat)centerX</div><div class="line">{</div><div class="line">    CGPoint center = self.center;</div><div class="line">    center.x = centerX;</div><div class="line">    self.center = center;</div><div class="line">}</div><div class="line">- (CGFloat)centerX</div><div class="line">{</div><div class="line">    return self.center.x;</div><div class="line">}</div><div class="line"></div><div class="line">- (void)setCenterY:(CGFloat)centerY</div><div class="line">{</div><div class="line">    CGPoint center = self.center;</div><div class="line">    center.y = centerY;</div><div class="line">    self.center = center;</div><div class="line">}</div><div class="line">- (CGFloat)centerY</div><div class="line">{</div><div class="line">    return self.center.y;</div><div class="line">}</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>  
+		<p><img src="/2016/09/07/GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;/GIT.png" alt="GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;"><br><img src="/2016/09/07/GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;/GIT.pdf" alt="&#x70B9;&#x51FB;&#x67E5;&#x770B;pdf&#xFF0C;&#x8F83;&#x6E05;&#x6670;"></p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -112,7 +113,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://MrXiaoYang.github.io/2016/09/05/自定义frame/" data-title="自定义控件的frame | KeepOnline" data-tsina="null" class="share clearfix">
+	  <div data-url="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/" data-title="GIT终端命令 | KeepOnline" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -125,19 +126,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/09/05/导航栏上的item/" title="导航栏上的item">
-  <strong>上一篇：</strong><br/>
-  <span>
-  导航栏上的item</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/09/05/图片处理相关/"  title="图片处理相关">
+<a href="/2016/09/06/GIT/"  title="GIT">
  <strong>下一篇：</strong><br/> 
- <span>图片处理相关
+ <span>GIT
 </span>
 </a>
 </div>
