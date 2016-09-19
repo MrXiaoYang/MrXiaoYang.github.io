@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="KeepOnline">KeepOnline</a></h1>
 				<h2 class="blog-motto">挂机打怪ing</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:MrXiaoYang.github.io">
 					</form>
 					
@@ -74,6 +74,62 @@
     </header>
     <div id="container">
       <div id="main">
+
+   
+    
+    <article class="post-expand ios10.0" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/19/配置获取隐私数据权限声明/" title="配置获取隐私数据权限声明" itemprop="url">配置获取隐私数据权限声明</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-19T08:35:27.000Z" itemprop="datePublished"> 發表於 2016-09-19</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h4 id="iOS-10&#x7684;&#x4E00;&#x5927;&#x53D8;&#x5316;&#x662F;&#x66F4;&#x5F3A;&#x7684;&#x9690;&#x79C1;&#x6570;&#x636E;&#x4FDD;&#x62A4;&#x3002;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x662F;&#x8FD9;&#x4E48;&#x63CF;&#x8FF0;&#x7684;&#xFF1A;"><a href="#iOS-10&#x7684;&#x4E00;&#x5927;&#x53D8;&#x5316;&#x662F;&#x66F4;&#x5F3A;&#x7684;&#x9690;&#x79C1;&#x6570;&#x636E;&#x4FDD;&#x62A4;&#x3002;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x662F;&#x8FD9;&#x4E48;&#x63CF;&#x8FF0;&#x7684;&#xFF1A;" class="headerlink" title="iOS 10&#x7684;&#x4E00;&#x5927;&#x53D8;&#x5316;&#x662F;&#x66F4;&#x5F3A;&#x7684;&#x9690;&#x79C1;&#x6570;&#x636E;&#x4FDD;&#x62A4;&#x3002;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x662F;&#x8FD9;&#x4E48;&#x63CF;&#x8FF0;&#x7684;&#xFF1A;"></a>iOS 10&#x7684;&#x4E00;&#x5927;&#x53D8;&#x5316;&#x662F;&#x66F4;&#x5F3A;&#x7684;&#x9690;&#x79C1;&#x6570;&#x636E;&#x4FDD;&#x62A4;&#x3002;&#x5728;&#x6587;&#x6863;&#x4E2D;&#x662F;&#x8FD9;&#x4E48;&#x63CF;&#x8FF0;&#x7684;&#xFF1A;</h4><p>You must statically declare your app&#x2019;s intended use of protected data classes by including the appropriate purpose string keys in your Info.plist file.</p>
+<p>&#x7B80;&#x5355;&#x7684;&#x8BF4;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x6570;&#x636E;&#x90FD;&#x9700;&#x8981;&#x73B0;&#x5728;<code>Info.plist</code>&#x4E2D;&#x58F0;&#x660E;&#xFF0C;&#x5426;&#x5219;&#x4F1A;<code>crash</code>&#x3002;<br>&#x8FD9;&#x4E9B;&#x7528;&#x6237;&#x6570;&#x636E;&#x5305;&#x62EC;&#xFF1A;</p>
+<p>Contacts, Calendar, Reminders, Photos, Bluetooth Sharing, Microphone, Camera, Location, Health, HomeKit, Media Library, Motion, CallKit, Speech Recognition, SiriKit, TV Provider.</p>
+<p>10&#x4E4B;&#x524D;&#x53EA;&#x9700;&#x8981;&#x83B7;&#x53D6;&#x4F4D;&#x7F6E;&#x65F6;&#x914D;&#x7F6E;&#xFF0C;&#x73B0;&#x5728;&#x66F4;&#x4E25;&#x683C;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x9700;&#x8981;&#x8C03;&#x7528;&#x76F8;&#x518C;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF0C;&#x4E5F;&#x9700;&#x8981;&#x5728;Info.plist&#x4E2D;&#x914D;&#x7F6E;privacy&#x3002;<br>&#x597D;&#x5728;&#x8FD9;&#x4E9B;key&#x7684;&#x540D;&#x5B57;&#x5728;Xcode 8&#x4E2D;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x81EA;&#x52A8;&#x8865;&#x5168;&#x3002;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x8F93;&#x5165;Privacy&#x540E;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x81EA;&#x52A8;&#x63D0;&#x793A;:</p>
+<p><img src="/2016/09/19/&#x914D;&#x7F6E;&#x83B7;&#x53D6;&#x9690;&#x79C1;&#x6570;&#x636E;&#x6743;&#x9650;&#x58F0;&#x660E;/1.png" alt="&#x56FE;1"></p>
+<pre><code>&#x540E;&#x9762;&#x586B;&#x7684;string&#x4F1A;&#x5728;&#x5F39;&#x51FA;&#x7528;&#x6237;&#x5141;&#x8BB8;&#x65F6;&#x5C55;&#x793A;&#x5728;&#x63CF;&#x8FF0;&#x91CC;&#x3002;&#x5982;&#x679C;&#x63CF;&#x8FF0;&#x7A7A;&#x7740;&#x63D0;&#x4EA4;AppStore&#x65F6;&#x4F1A;&#x62D2;&#x7EDD;&#x3002;
+</code></pre><p><img src="/2016/09/19/&#x914D;&#x7F6E;&#x83B7;&#x53D6;&#x9690;&#x79C1;&#x6570;&#x636E;&#x6743;&#x9650;&#x58F0;&#x660E;/2.png" alt="&#x56FE;2"></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
 
    
     
@@ -88,7 +144,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-07T02:48:51.000Z" itemprop="datePublished"> Published 2016-09-07</time>
+    <time datetime="2016-09-07T02:48:51.000Z" itemprop="datePublished"> 發表於 2016-09-07</time>
     
   </p>
 </header>
@@ -325,7 +381,7 @@ Once this information is available, we can continue with the review of your app.
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-07T01:38:04.000Z" itemprop="datePublished"> Published 2016-09-07</time>
+    <time datetime="2016-09-07T01:38:04.000Z" itemprop="datePublished"> 發表於 2016-09-07</time>
     
   </p>
 </header>
@@ -375,7 +431,7 @@ Once this information is available, we can continue with the review of your app.
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-06T04:05:40.000Z" itemprop="datePublished"> Published 2016-09-06</time>
+    <time datetime="2016-09-06T04:05:40.000Z" itemprop="datePublished"> 發表於 2016-09-06</time>
     
   </p>
 </header>
@@ -1018,7 +1074,7 @@ viewcontroller&#x5220;&#x9664;&#x70B9;&#x4EE3;&#x7801;&#x540E;&#x63D0;&#x4EA4;&#
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-06T02:41:35.000Z" itemprop="datePublished"> Published 2016-09-06</time>
+    <time datetime="2016-09-06T02:41:35.000Z" itemprop="datePublished"> 發表於 2016-09-06</time>
     
   </p>
 </header>
@@ -1074,7 +1130,7 @@ viewcontroller&#x5220;&#x9664;&#x70B9;&#x4EE3;&#x7801;&#x540E;&#x63D0;&#x4EA4;&#
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-05T08:20:46.000Z" itemprop="datePublished"> Published 2016-09-05</time>
+    <time datetime="2016-09-05T08:20:46.000Z" itemprop="datePublished"> 發表於 2016-09-05</time>
     
   </p>
 </header>
@@ -1367,7 +1423,7 @@ switch (obj.transactionState) {
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-05T07:52:17.000Z" itemprop="datePublished"> Published 2016-09-05</time>
+    <time datetime="2016-09-05T07:52:17.000Z" itemprop="datePublished"> 發表於 2016-09-05</time>
     
   </p>
 </header>
@@ -1434,7 +1490,7 @@ switch (obj.transactionState) {
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-05T07:28:19.000Z" itemprop="datePublished"> Published 2016-09-05</time>
+    <time datetime="2016-09-05T07:28:19.000Z" itemprop="datePublished"> 發表於 2016-09-05</time>
     
   </p>
 </header>
@@ -1554,7 +1610,7 @@ switch (obj.transactionState) {
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-05T06:46:28.000Z" itemprop="datePublished"> Published 2016-09-05</time>
+    <time datetime="2016-09-05T06:46:28.000Z" itemprop="datePublished"> 發表於 2016-09-05</time>
     
   </p>
 </header>
@@ -1616,7 +1672,7 @@ switch (obj.transactionState) {
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-05T05:55:33.000Z" itemprop="datePublished"> Published 2016-09-05</time>
+    <time datetime="2016-09-05T05:55:33.000Z" itemprop="datePublished"> 發表於 2016-09-05</time>
     
   </p>
 </header>
@@ -1655,67 +1711,16 @@ switch (obj.transactionState) {
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/05/自定义UITabBar/" title="自定义UITabBar" itemprop="url">自定义UITabBar</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-05T05:40:05.000Z" itemprop="datePublished"> Published 2016-09-05</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">#import &lt;UIKit/UIKit.h&gt;</div><div class="line"></div><div class="line">@interface XYTabBar : UITabBar</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">#import &quot;XYTabBar.h&quot;</div><div class="line"></div><div class="line">@interface XYTabBar ()</div><div class="line"></div><div class="line">@property (nonatomic, weak) UIButton *pulsButton;</div><div class="line">@property (nonatomic, strong) UIControl *previousClickedTabbatButton;</div><div class="line"></div><div class="line">@end</div><div class="line"></div><div class="line">@implementation XYTabBar</div><div class="line"></div><div class="line">- (UIButton *)pulsButton</div><div class="line">{</div><div class="line">    if (_pulsButton == nil) {</div><div class="line">        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];</div><div class="line">        [button setImage:[UIImage imageNamed:@&quot;tabBar_publish_icon&quot;] forState:UIControlStateNormal];</div><div class="line">        [button setImage:[UIImage imageNamed:@&quot;tabBar_publish_click_icon&quot;] forState:UIControlStateHighlighted];</div><div class="line">        [button sizeToFit];</div><div class="line">        [self addSubview:button];</div><div class="line">        </div><div class="line">        _pulsButton = button;</div><div class="line">    }</div><div class="line">    return _pulsButton;</div><div class="line">}</div><div class="line"></div><div class="line">- (void)layoutSubviews</div><div class="line">{</div><div class="line">    [super layoutSubviews];</div><div class="line">    </div><div class="line">    NSInteger count = self.items.count + 1;</div><div class="line">    </div><div class="line">    CGFloat w = self.xy_width / count;</div><div class="line">    CGFloat h = self.xy_height;</div><div class="line">    CGFloat x = 0;</div><div class="line">    </div><div class="line">    int i = 0;</div><div class="line">    for (UIControl *tabBarButton in self.subviews) {</div><div class="line">        </div><div class="line">        if (i == 0) {</div><div class="line">            self.previousClickedTabbatButton = tabBarButton;</div><div class="line">        }</div><div class="line">        </div><div class="line">        if ([tabBarButton isKindOfClass:NSClassFromString(@&quot;UITabBarButton&quot;)]) {</div><div class="line">            if (i == 2) {</div><div class="line">                i += 1;</div><div class="line">            }</div><div class="line">            </div><div class="line">            x = i * w;</div><div class="line">            tabBarButton.frame = CGRectMake(x, 0, w, h);</div><div class="line">            </div><div class="line">            i ++;</div><div class="line">            </div><div class="line">            //  &#x6DFB;&#x52A0;&#x76D1;&#x542C;</div><div class="line">            [tabBarButton addTarget:self action:@selector(tabBarButtonClick:) forControlEvents:UIControlEventTouchUpInside];</div><div class="line">        }</div><div class="line">    }</div><div class="line">    </div><div class="line">    // &#x53D1;&#x5E03;&#x6309;&#x94AE;&#x7684;&#x4F4D;&#x7F6E;</div><div class="line">    self.pulsButton.center = CGPointMake(self.xy_width * 0.5, self.xy_height * 0.5);</div><div class="line">    </div><div class="line">}</div><div class="line"></div><div class="line">#pragma mark - &#x76D1;&#x542C;</div><div class="line">/**</div><div class="line"> *  &#x76D1;&#x542C;&#x91CD;&#x590D;&#x70B9;&#x51FB;</div><div class="line"> */</div><div class="line">- (void)tabBarButtonClick:(UIControl *)tabBarButton</div><div class="line">{</div><div class="line">    if (self.previousClickedTabbatButton == tabBarButton) {</div><div class="line">        [[NSNotificationCenter defaultCenter] postNotificationName:XYTabBarButtonDidClickRepeatNotification object:nil];</div><div class="line">    }</div><div class="line">    </div><div class="line">    self.previousClickedTabbatButton = tabBarButton;</div><div class="line">}</div><div class="line"></div><div class="line">@end</div></pre></td></tr></table></figure>
-<p><img src="/2016/09/05/&#x81EA;&#x5B9A;&#x4E49;UITabBar/&#x56FE;&#x7247;.png" alt="&#x56FE;&#x7247;"></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -1726,7 +1731,7 @@ switch (obj.transactionState) {
   
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情鏈接</p>
     <ul>
         
           <li>
@@ -1748,11 +1753,11 @@ switch (obj.transactionState) {
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">Weibo</p>
+  <p class="asidetitle">新浪微博</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
 </div>
 
@@ -1902,7 +1907,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
