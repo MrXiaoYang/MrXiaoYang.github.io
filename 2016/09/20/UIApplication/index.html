@@ -1,0 +1,554 @@
+
+ <!DOCTYPE HTML>
+<html lang="zn-ch">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>UIApplication | KeepOnline</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="MrXiaoYang">
+    
+
+    
+    <meta name="description" content="UIApplication&amp;#x529F;&amp;#x80FD;1.&amp;#x8BBE;&amp;#x7F6E;&amp;#x5E94;&amp;#x7528;&amp;#x63D0;&amp;#x9192;&amp;#x6570;&amp;#x5B57;
+    &amp;#x83B7;&amp;#x53D6;UIApplication&amp;#x5BF9;&amp;#x8C61;
+    UIApplication *ap = [UIApplication sharedApplicati">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UIApplication">
+<meta property="og:url" content="http://MrXiaoYang.github.io/2016/09/20/UIApplication/index.html">
+<meta property="og:site_name" content="KeepOnline">
+<meta property="og:description" content="UIApplication&amp;#x529F;&amp;#x80FD;1.&amp;#x8BBE;&amp;#x7F6E;&amp;#x5E94;&amp;#x7528;&amp;#x63D0;&amp;#x9192;&amp;#x6570;&amp;#x5B57;
+    &amp;#x83B7;&amp;#x53D6;UIApplication&amp;#x5BF9;&amp;#x8C61;
+    UIApplication *ap = [UIApplication sharedApplicati">
+<meta property="og:updated_time" content="2016-09-20T03:34:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="UIApplication">
+<meta name="twitter:description" content="UIApplication&amp;#x529F;&amp;#x80FD;1.&amp;#x8BBE;&amp;#x7F6E;&amp;#x5E94;&amp;#x7528;&amp;#x63D0;&amp;#x9192;&amp;#x6570;&amp;#x5B57;
+    &amp;#x83B7;&amp;#x53D6;UIApplication&amp;#x5BF9;&amp;#x8C61;
+    UIApplication *ap = [UIApplication sharedApplicati">
+
+    
+    <link rel="alternative" href="/atom.xml" title="KeepOnline" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="KeepOnline" title="KeepOnline"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="KeepOnline">KeepOnline</a></h1>
+				<h2 class="blog-motto">挂机打怪ing</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:MrXiaoYang.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2016/09/20/UIApplication/" title="UIApplication" itemprop="url">UIApplication</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-20T03:33:10.000Z" itemprop="datePublished"> 发表于 2016-09-20</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#UIApplication功能"><span class="toc-number">1.</span> <span class="toc-text">UIApplication功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UIApplication代理和程序的启动流程"><span class="toc-number">2.</span> <span class="toc-text">UIApplication代理和程序的启动流程.</span></a></li></ol>
+		
+		</div>
+		
+		<h3 id="UIApplication&#x529F;&#x80FD;"><a href="#UIApplication&#x529F;&#x80FD;" class="headerlink" title="UIApplication&#x529F;&#x80FD;"></a>UIApplication&#x529F;&#x80FD;</h3><pre><code>1.&#x8BBE;&#x7F6E;&#x5E94;&#x7528;&#x63D0;&#x9192;&#x6570;&#x5B57;
+    &#x83B7;&#x53D6;UIApplication&#x5BF9;&#x8C61;
+    UIApplication *ap = [UIApplication sharedApplication];
+
+    &#x5728;&#x8BBE;&#x7F6E;&#x4E4B;&#x524D;, &#x8981;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x901A;&#x77E5;,&#x4ECE;ios8&#x4E4B;&#x540E;,&#x90FD;&#x8981;&#x5148;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x901A;&#x77E5;&#x5BF9;&#x8C61;.&#x624D;&#x80FD;&#x591F;&#x63A5;&#x6536;&#x5230;&#x63D0;&#x9192;.
+    UIUserNotificationSettings *notice = [UIUserNotificationSettings   
+        settingsForTypes:UIUserNotificationTypeBadge categories:nil];
+    &#x6CE8;&#x518C;&#x901A;&#x77E5;&#x5BF9;&#x8C61;
+    [ap registerUserNotificationSettings:notice];
+    &#x8BBE;&#x7F6E;&#x63D0;&#x9192;&#x6570;&#x5B57;
+    ap.applicationIconBadgeNumber = 10;
+2.&#x8BBE;&#x7F6E;&#x8FDE;&#x7F51;&#x72B6;&#x6001;
+   ap.networkActivityIndicatorVisible = YES;
+3.&#x8BBE;&#x7F6E;&#x72B6;&#x6001;&#x680F;
+    &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x72B6;&#x6001;&#x680F;,&#x9ED8;&#x8BA4;&#x662F;&#x4EA4;&#x7ED9;&#x63A7;&#x5236;&#x5668;&#x6765;&#x7BA1;&#x7406;&#x7684;.
+    &#x63A7;&#x5236;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6CD5;,&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x91CD;&#x5199;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;
+    &#x5728;&#x63A7;&#x5236;&#x5668;&#x5F53;&#x4E2D;&#x8BBE;&#x7F6E;&#x72B6;&#x6001;&#x680F;&#x6837;&#x5F0F;
+    -(UIStatusBarStyle)preferredStatusBarStyle{
+        return UIStatusBarStyleLightContent;
+    }
+
+    &#x9690;&#x85CF;&#x72B6;&#x6001;&#x680F;,&#x901A;&#x8FC7;&#x63A7;&#x5236;&#x5668;&#x7684;&#x65B9;&#x5F0F;.&#x540C;&#x6837;&#x5B9E;&#x73B0;&#x65B9;&#x6CD5;:
+    &#x8FD4;&#x56DE;NO&#x65F6;&#x4E3A;&#x4E0D;&#x9690;&#x85CF;
+    &#x8FD4;&#x56DE;YES&#x65F6;&#x4E3A;&#x9690;&#x533F;
+    -(BOOL)prefersStatusBarHidden{
+        return NO;
+    }
+
+    &#x901A;&#x5E38;&#x5728;&#x5F00;&#x53D1;&#x5F53;&#x4E2D;&#x90FD;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6765;&#x7BA1;&#x7406;&#x72B6;&#x6001;&#x680F;&#x7684;.&#x6765;&#x505A;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;,&#x4E0D;&#x7136;&#x7684;&#x8BDD;, &#x4F1A;&#x6709;&#x5F88;&#x591A;&#x4E2A;&#x63A7;&#x5236;&#x5668;.&#x4F1A;&#x975E;&#x5E38;&#x7684;&#x9EBB;&#x70E6;.
+    &#x60F3;&#x8981;&#x8BA9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x72B6;&#x6001;&#x680F;,&#x8981;&#x5728;info.plist&#x5F53;&#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;,
+    &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;key&#x503C;:&#x662F;&#x6700;&#x540E;&#x4E00;&#x4E2A;,View controller-based status bar appearance
+    &#x8BBE;&#x7F6E;&#x4E3A;NO.&#x5C31;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6765;&#x7BA1;&#x7406;&#x4E86;.
+
+    &#x901A;&#x8FC7;UIApplication&#x6765;&#x7BA1;&#x7406;&#x72B6;&#x6001;.
+    1.&#x83B7;&#x53D6;UIApplication
+    UIApplication *ap = [UIApplication sharedApplication];
+    2.&#x8BBE;&#x7F6E;&#x72B6;&#x6001;&#x680F;&#x6837;&#x5F0F;.
+    ap.statusBarStyle = UIStatusBarStyleLightContent;
+    3.&#x8BBE;&#x7F6E;&#x72B6;&#x6001;&#x7684;&#x9690;&#x85CF;
+    ap.statusBarHidden = YES;
+
+
+4.&#x8DF3;&#x8F6C;&#x7F51;&#x9875;
+    UIApplication *ap = [UIApplication sharedApplication];
+    URL:&#x534F;&#x8BAE;&#x5934;://&#x57DF;&#x540D;
+    &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7;&#x534F;&#x8BAE;&#x5934;&#x7684;&#x7C7B;&#x578B;,&#x53BB;&#x6253;&#x5F00;&#x76F8;&#x5E94;&#x7684;&#x8F6F;&#x4EF6;.
+    NSURL *url =[NSURL URLWithString:@&quot;http://www.baidu.com&quot;];
+    [ap openURL:url];
+</code></pre><h3 id="UIApplication&#x4EE3;&#x7406;&#x548C;&#x7A0B;&#x5E8F;&#x7684;&#x542F;&#x52A8;&#x6D41;&#x7A0B;"><a href="#UIApplication&#x4EE3;&#x7406;&#x548C;&#x7A0B;&#x5E8F;&#x7684;&#x542F;&#x52A8;&#x6D41;&#x7A0B;" class="headerlink" title="UIApplication&#x4EE3;&#x7406;&#x548C;&#x7A0B;&#x5E8F;&#x7684;&#x542F;&#x52A8;&#x6D41;&#x7A0B;."></a>UIApplication&#x4EE3;&#x7406;&#x548C;&#x7A0B;&#x5E8F;&#x7684;&#x542F;&#x52A8;&#x6D41;&#x7A0B;.</h3><pre><code>&#x6240;&#x6709;&#x7684;&#x79FB;&#x52A8;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x90FD;&#x6709;&#x4E2A;&#x81F4;&#x547D;&#x7684;&#x7F3A;&#x70B9;&#xFF1A;app&#x5F88;&#x5BB9;&#x6613;&#x53D7;&#x5230;&#x6253;&#x6270;&#x3002;&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x6765;&#x7535;&#x6216;&#x8005;&#x9501;&#x5C4F;&#x4F1A;&#x5BFC;&#x81F4;app&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x751A;&#x81F3;&#x88AB;&#x7EC8;&#x6B62;
+&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x5176;&#x5B83;&#x7C7B;&#x4F3C;&#x7684;&#x60C5;&#x51B5;&#x4F1A;&#x5BFC;&#x81F4;app&#x53D7;&#x5230;&#x5E72;&#x6270;&#xFF0C;&#x5728;app&#x53D7;&#x5230;&#x5E72;&#x6270;&#x65F6;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x4E8B;&#x4EF6;&#xFF0C;
+&#x8FD9;&#x65F6;UIApplication&#x4F1A;&#x901A;&#x77E5;&#x5B83;&#x7684;delegate&#x5BF9;&#x8C61;&#xFF0C;&#x8BA9;delegate&#x4EE3;&#x7406;&#x6765;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x7CFB;&#x7EDF;&#x4E8B;&#x4EF6;
+
+delegate&#x53EF;&#x5904;&#x7406;&#x7684;&#x4E8B;&#x4EF6;&#x5305;&#x62EC;&#xFF1A;
+&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x4E8B;&#x4EF6;(&#x5982;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x548C;&#x5173;&#x95ED;)
+&#x7CFB;&#x7EDF;&#x4E8B;&#x4EF6;(&#x5982;&#x6765;&#x7535;)
+&#x5185;&#x5B58;&#x8B66;&#x544A;
+...
+
+UIApplication&#x4F1A;&#x5728;&#x7A0B;&#x5E8F;&#x4E00;&#x542F;&#x52A8;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x9075;&#x5B88;UIApplicationDelegate&#x4EE3;&#x7406;.
+&#x8FD9;&#x4E2A;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x7A0B;&#x5E8F;&#x4E00;&#x521B;&#x5EFA;&#x65F6;&#x7684;AppDelegate&#x7C7B;.AppDelegate&#x5C31;&#x662F;&#x9075;&#x5B88;&#x4E86;UIApplicationDelegate&#x534F;&#x8BAE;.
+&#x5728;&#x8FD9;&#x4E2A;&#x7C7B;&#x4E2D;&#x5F88;&#x5B9A;&#x4E49;&#x5F88;&#x591A;&#x76D1;&#x542C;&#x7CFB;&#x7EDF;&#x4E8B;&#x4EF6;&#x7684;&#x65B9;&#x6CD5;.&#x540C;&#x65F6;&#x4E5F;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#x65B9;&#x6CD5;.
+
+&#x4E3B;&#x8981;&#x65B9;&#x6CD5;&#x6709;:
+
+ &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;
+ &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x5B8C;&#x6210;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSLog(@&quot;%s&quot;,__func__);
+    return YES;
+}
+
+ &#x5F53;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5373;&#x5C06;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;
+- (void)applicationWillResignActive:(UIApplication *)application {
+    NSLog(@&quot;%s&quot;,__func__);
+}
+
+ &#x5F53;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B8C;&#x5168;&#x8FDB;&#x5165;&#x540E;&#x53F0;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;
+- (void)applicationDidEnterBackground:(UIApplication *)application{
+   NSLog(@&quot;%s&quot;,__func__);
+}
+
+ &#x5F53;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5373;&#x5C06;&#x8FDB;&#x5165;&#x524D;&#x53F0;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+  NSLog(@&quot;%s&quot;,__func__);}
+
+ &#x5F53;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B8C;&#x5168;&#x83B7;&#x53D6;&#x7126;&#x70B9;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;
+ &#x53EA;&#x6709;&#x5F53;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B8C;&#x5168;&#x83B7;&#x53D6;&#x5230;&#x7126;&#x70B9;,&#x624D;&#x80FD;&#x4E0E;&#x7528;&#x6237;&#x4EA4;&#x4E92;.
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    NSLog(@&quot;%s&quot;,__func__);
+}
+
+ &#x5F53;&#x6211;&#x4EEC;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5373;&#x5C06;&#x5173;&#x95ED;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;
+- (void)applicationWillTerminate:(UIApplication *)application {
+   NSLog(@&quot;%s&quot;,__func__);
+}
+
+2.&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x7A0B;&#x52A8;&#x539F;&#x7406;
+
+    &#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x65F6;&#x6267;&#x884C;main&#x51FD;&#x6570;,&#x5728;main&#x51FD;&#x6570;&#x5F53;&#x4E2D;&#x6709;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;.
+    int main(int argc, char * argv[]) {
+      @autoreleasepool {
+        &#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;:UIApplication&#x7C7B;&#x540D;&#x6216;&#x8005;&#x5B50;&#x7C7B;&#x7684;&#x540D;&#x79F0; nil == @&quot;UIApplication&quot;
+        &#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;:UIApplication&#x7684;&#x4EE3;&#x7406;&#x7684;&#x4EE3;&#x7406;&#x540D;&#x79F0;
+           NSStringFromClass:&#x628A;&#x7C7B;&#x540D;&#x8F6C;&#x5316;&#x5B57;&#x7B26;&#x4E32;
+        NSStringFromClass&#x597D;&#x5904;:1.&#x6709;&#x63D0;&#x793A;&#x529F;&#x80FD; 2.&#x907F;&#x514D;&#x8F93;&#x5165;&#x9519;&#x8BEF;
+       return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+      }
+
+    }
+
+&#x5E95;&#x5C42;&#x539F;&#x7406;&#x4E3A;:
+    1.&#x6839;&#x636E;principalClassName&#x4F20;&#x9012;&#x7684;&#x7C7B;&#x540D;&#x521B;&#x5EFA;UIApplication&#x5BF9;&#x8C61;
+    2.&#x521B;&#x5EFA;UIApplication&#x4EE3;&#x7406;&#x5BF9;&#x8C61;,&#x7ED9;UIApplication&#x5BF9;&#x8C61;&#x8BBE;&#x7F6E;&#x4EE3;&#x7406;
+    3.&#x5F00;&#x542F;&#x4E3B;&#x8FD0;&#x884C;&#x4E8B;&#x4EF6;&#x5FAA;&#x73AF;,&#x5904;&#x7406;&#x4E8B;&#x4EF6;,&#x4FDD;&#x6301;&#x7A0B;&#x5E8F;&#x4E00;&#x76F4;&#x8FD0;&#x884C;.
+    4.&#x52A0;&#x8F7D;info.plist,&#x5224;&#x65AD;&#x4E0B;&#x662F;&#x5426;&#x6307;&#x5B9A;main,&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E86;,&#x5C31;&#x4F1A;&#x53BB;&#x52A0;&#x8F7D;StoryBoard.
+</code></pre>  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://MrXiaoYang.github.io/2016/09/20/UIApplication/" data-title="UIApplication | KeepOnline" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/09/20/项目中常见的文件/"  title="项目中常见的文件">
+ <strong>下一篇：</strong><br/> 
+ <span>项目中常见的文件
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#UIApplication功能"><span class="toc-number">1.</span> <span class="toc-text">UIApplication功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#UIApplication代理和程序的启动流程"><span class="toc-number">2.</span> <span class="toc-text">UIApplication代理和程序的启动流程.</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+
+  
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+    <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> “Who am i  !!!” <br/>
+			“Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu Biu”</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/2176287895" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="MrXiaoYang">MrXiaoYang</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
