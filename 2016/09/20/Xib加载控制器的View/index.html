@@ -4,23 +4,29 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>GIT终端命令 | KeepOnline</title>
+    <title>Xib加载控制器的View | KeepOnline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="MrXiaoYang">
     
 
     
-    <meta property="og:type" content="article">
-<meta property="og:title" content="GIT终端命令">
-<meta property="og:url" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/index.html">
+    <meta name="description" content="&amp;#x52A0;&amp;#x8F7D;&amp;#x7684;&amp;#x6B65;&amp;#x9AA4;&amp;#x4E3A;:1.&amp;#x521B;&amp;#x5EFA;Xib
+2.&amp;#x5F80;xib&amp;#x5F53;&amp;#x4E2D;&amp;#x62D6;&amp;#x5165;&amp;#x4E00;&amp;#x4E2A;View.
+3.&amp;#x8BBE;&amp;#x7F6E;Xib&amp;#x7684;file&amp;apos;s owner&amp;#x7C7B;&amp;#x578B;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Xib加载控制器的View">
+<meta property="og:url" content="http://MrXiaoYang.github.io/2016/09/20/Xib加载控制器的View/index.html">
 <meta property="og:site_name" content="KeepOnline">
-<meta property="og:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.png">
-<meta property="og:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.pdf">
-<meta property="og:updated_time" content="2016-09-07T01:39:51.000Z">
+<meta property="og:description" content="&amp;#x52A0;&amp;#x8F7D;&amp;#x7684;&amp;#x6B65;&amp;#x9AA4;&amp;#x4E3A;:1.&amp;#x521B;&amp;#x5EFA;Xib
+2.&amp;#x5F80;xib&amp;#x5F53;&amp;#x4E2D;&amp;#x62D6;&amp;#x5165;&amp;#x4E00;&amp;#x4E2A;View.
+3.&amp;#x8BBE;&amp;#x7F6E;Xib&amp;#x7684;file&amp;apos;s owner&amp;#x7C7B;&amp;#x578B;">
+<meta property="og:updated_time" content="2016-09-20T03:37:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GIT终端命令">
-<meta name="twitter:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.png">
+<meta name="twitter:title" content="Xib加载控制器的View">
+<meta name="twitter:description" content="&amp;#x52A0;&amp;#x8F7D;&amp;#x7684;&amp;#x6B65;&amp;#x9AA4;&amp;#x4E3A;:1.&amp;#x521B;&amp;#x5EFA;Xib
+2.&amp;#x5F80;xib&amp;#x5F53;&amp;#x4E2D;&amp;#x62D6;&amp;#x5165;&amp;#x4E00;&amp;#x4E2A;View.
+3.&amp;#x8BBE;&amp;#x7F6E;Xib&amp;#x7684;file&amp;apos;s owner&amp;#x7C7B;&amp;#x578B;">
 
     
     <link rel="alternative" href="/atom.xml" title="KeepOnline" type="application/atom+xml">
@@ -80,14 +86,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/07/GIT终端命令/" title="GIT终端命令" itemprop="url">GIT终端命令</a>
+      <a href="/2016/09/20/Xib加载控制器的View/" title="Xib加载控制器的View" itemprop="url">Xib加载控制器的View</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-07T01:38:04.000Z" itemprop="datePublished"> Published 2016-09-07</time>
+    <time datetime="2016-09-20T03:36:36.000Z" itemprop="datePublished"> Published 2016-09-20</time>
     
   </p>
 </header>
@@ -96,12 +102,23 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">Contents</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#加载的步骤为"><span class="toc-number">1.</span> <span class="toc-text">加载的步骤为:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xib使用注意事项"><span class="toc-number">2.</span> <span class="toc-text">xib使用注意事项:</span></a></li></ol>
 		
 		</div>
 		
-		<p><img src="/2016/09/07/GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;/GIT.png" alt="GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;"><br><img src="/2016/09/07/GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;/GIT.pdf" alt="&#x70B9;&#x51FB;&#x67E5;&#x770B;pdf&#xFF0C;&#x8F83;&#x6E05;&#x6670;"></p>
-  
+		<h4 id="&#x52A0;&#x8F7D;&#x7684;&#x6B65;&#x9AA4;&#x4E3A;"><a href="#&#x52A0;&#x8F7D;&#x7684;&#x6B65;&#x9AA4;&#x4E3A;" class="headerlink" title="&#x52A0;&#x8F7D;&#x7684;&#x6B65;&#x9AA4;&#x4E3A;:"></a>&#x52A0;&#x8F7D;&#x7684;&#x6B65;&#x9AA4;&#x4E3A;:</h4><pre><code>1.&#x521B;&#x5EFA;Xib
+2.&#x5F80;xib&#x5F53;&#x4E2D;&#x62D6;&#x5165;&#x4E00;&#x4E2A;View.
+3.&#x8BBE;&#x7F6E;Xib&#x7684;file&apos;s owner&#x7C7B;&#x578B;&#x4E3A;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x90A3;&#x4E2A;&#x63A7;&#x5236;&#x5668;.
+4.&#x628A;View&#x4E0E;file&apos;s owner&#x8FDE;&#x7EBF;.    (&#x6CE8;&#x610F;, &#x53EA;&#x6709;&#x8BBE;&#x7F6E;&#x4E86;file&apos;s owner&#x7C7B;&#x578B;&#x624D;&#x80FD;&#x591F;&#x8FDB;&#x884C;&#x62D6;&#x7EBF;.)
+
+initWithNibName:&#x4E3A;&#x8981;&#x52A0;&#x8F7D;&#x7684;Xib&#x7684;&#x540D;&#x79F0;.
+ MyViewController *vc = [[MyViewController alloc] initWithNibName:@&quot;VC&quot; bundle:nil];
+</code></pre><h4 id="xib&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a href="#xib&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="headerlink" title="xib&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;:"></a>xib&#x4F7F;&#x7528;&#x6CE8;&#x610F;&#x4E8B;&#x9879;:</h4><pre><code>1.&#x5982;&#x679C;&#x4E00;&#x4E2A;view&#x4ECE;xib&#x4E2D;&#x52A0;&#x8F7D;,&#x5C31;&#x4E0D;&#x80FD;&#x7528;[xxx alloc] init] &#x548C; [xxx alloc] initWithFrame:]&#x521B;&#x5EFA;
+2.&#x5982;&#x679C;&#x4E00;&#x4E2A;xib&#x7ECF;&#x5E38;&#x88AB;&#x4F7F;&#x7528;,&#x5E94;&#x8BE5;&#x63D0;&#x4F9B;&#x5FEB;&#x901F;&#x6784;&#x9020;&#x7C7B;&#x65B9;&#x6CD5;
+3.&#x5982;&#x679C;&#x4E00;&#x4E2A;view&#x4ECE;xib&#x4E2D;&#x52A0;&#x8F7D;:
+      &#x7528;&#x4EE3;&#x7801;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x5B50;&#x63A7;&#x4EF6;,&#x5F97;&#x5728; initWithCoder: &#x548C; awakeFromNib &#x521B;&#x5EFA;
+4.&#x5982;&#x679C;&#x4E00;&#x4E2A;view&#x4ECE;xib&#x4E2D;&#x52A0;&#x8F7D;,&#x4F1A;&#x8C03;&#x7528;initWithCoder: &#x548C; awakeFromNib,&#x4E0D;&#x4F1A;&#x8C03;&#x7528;init&#x548C;initWithFrame:&#x65B9;&#x6CD5;
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -113,7 +130,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/" data-title="GIT终端命令 | KeepOnline" data-tsina="null" class="share clearfix">
+	  <div data-url="http://MrXiaoYang.github.io/2016/09/20/Xib加载控制器的View/" data-title="Xib加载控制器的View | KeepOnline" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -126,19 +143,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/09/07/提交苹果审核被拒原因总结/" title="提交苹果审核被拒原因总结">
-  <strong>上一篇：</strong><br/>
-  <span>
-  提交苹果审核被拒原因总结</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/09/06/GIT/"  title="GIT">
+<a href="/2016/09/20/从StoryBoard加载控制器/"  title="从StoryBoard加载控制器">
  <strong>下一篇：</strong><br/> 
- <span>GIT
+ <span>从StoryBoard加载控制器
 </span>
 </a>
 </div>
@@ -153,7 +162,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">Contents</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#加载的步骤为"><span class="toc-number">1.</span> <span class="toc-text">加载的步骤为:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#xib使用注意事项"><span class="toc-number">2.</span> <span class="toc-text">xib使用注意事项:</span></a></li></ol>
  
   </div>
 

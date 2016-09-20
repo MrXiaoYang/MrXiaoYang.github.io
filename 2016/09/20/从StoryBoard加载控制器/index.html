@@ -4,23 +4,32 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>GIT终端命令 | KeepOnline</title>
+    <title>从StoryBoard加载控制器 | KeepOnline</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="MrXiaoYang">
     
 
     
-    <meta property="og:type" content="article">
-<meta property="og:title" content="GIT终端命令">
-<meta property="og:url" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/index.html">
+    <meta name="description" content="1.&amp;#x521B;&amp;#x5EFA;&amp;#x7A97;&amp;#x53E3;
+self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+2.&amp;#x52A0;&amp;#x8F7D;&amp;#x63A7;&amp;#x5236;&amp;#x5668;
+&amp;#x4ECE;StoryBoard&amp;#x5F53;&amp;#x4E2D;&amp;#x52A0;&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从StoryBoard加载控制器">
+<meta property="og:url" content="http://MrXiaoYang.github.io/2016/09/20/从StoryBoard加载控制器/index.html">
 <meta property="og:site_name" content="KeepOnline">
-<meta property="og:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.png">
-<meta property="og:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.pdf">
-<meta property="og:updated_time" content="2016-09-07T01:39:51.000Z">
+<meta property="og:description" content="1.&amp;#x521B;&amp;#x5EFA;&amp;#x7A97;&amp;#x53E3;
+self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+2.&amp;#x52A0;&amp;#x8F7D;&amp;#x63A7;&amp;#x5236;&amp;#x5668;
+&amp;#x4ECE;StoryBoard&amp;#x5F53;&amp;#x4E2D;&amp;#x52A0;&amp;#x">
+<meta property="og:updated_time" content="2016-09-20T03:36:21.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GIT终端命令">
-<meta name="twitter:image" content="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/GIT.png">
+<meta name="twitter:title" content="从StoryBoard加载控制器">
+<meta name="twitter:description" content="1.&amp;#x521B;&amp;#x5EFA;&amp;#x7A97;&amp;#x53E3;
+self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+2.&amp;#x52A0;&amp;#x8F7D;&amp;#x63A7;&amp;#x5236;&amp;#x5668;
+&amp;#x4ECE;StoryBoard&amp;#x5F53;&amp;#x4E2D;&amp;#x52A0;&amp;#x">
 
     
     <link rel="alternative" href="/atom.xml" title="KeepOnline" type="application/atom+xml">
@@ -80,14 +89,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/07/GIT终端命令/" title="GIT终端命令" itemprop="url">GIT终端命令</a>
+      <a href="/2016/09/20/从StoryBoard加载控制器/" title="从StoryBoard加载控制器" itemprop="url">从StoryBoard加载控制器</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-07T01:38:04.000Z" itemprop="datePublished"> Published 2016-09-07</time>
+    <time datetime="2016-09-20T03:35:52.000Z" itemprop="datePublished"> Published 2016-09-20</time>
     
   </p>
 </header>
@@ -100,8 +109,29 @@
 		
 		</div>
 		
-		<p><img src="/2016/09/07/GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;/GIT.png" alt="GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;"><br><img src="/2016/09/07/GIT&#x7EC8;&#x7AEF;&#x547D;&#x4EE4;/GIT.pdf" alt="&#x70B9;&#x51FB;&#x67E5;&#x770B;pdf&#xFF0C;&#x8F83;&#x6E05;&#x6670;"></p>
-  
+		<pre><code>1.&#x521B;&#x5EFA;&#x7A97;&#x53E3;
+self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+2.&#x52A0;&#x8F7D;&#x63A7;&#x5236;&#x5668;
+&#x4ECE;StoryBoard&#x5F53;&#x4E2D;&#x52A0;&#x8F7D;&#x63A7;&#x5236;&#x5668;
+UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@&quot;Main&quot; bundle:nil];
+&#x52A0;&#x8F7D;&#x526A;&#x5934;&#x6307;&#x5411;&#x7684;&#x63A7;&#x5236;&#x5668;
+UIViewController *vc = [storyBoard instantiateInitialViewController];
+3.&#x8BBE;&#x7F6E;&#x7A97;&#x53E3;&#x6839;&#x63A7;&#x5236;&#x5668;
+self.window.rootViewController = vc;
+4.&#x663E;&#x793A;&#x7A97;&#x53E3;
+[self.window makeKeyAndVisible];
+
+
+&#x52A0;&#x8F7D;&#x63A7;&#x5236;&#x5668;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;
+
+0.&#x52A0;&#x8F7D;&#x6307;&#x5B9A;&#x7684;StoryBoard.
+UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@&quot;Main&quot; bundle:nil];
+1.&#x52A0;&#x8F7D;&#x7BAD;&#x5934;&#x6240;&#x6307;&#x5411;&#x7684;&#x63A7;&#x5236;&#x5668;.
+UIViewController *vc = [storyBoard instantiateInitialViewController];
+2.&#x52A0;&#x8F7D;&#x6307;&#x5B9A;&#x6807;&#x8BC6;&#x7684;&#x63A7;&#x5236;&#x5668;.
+ UIViewController *vc = [storyBoard         
+                           instantiateViewControllerWithIdentifier:@&quot;idCongtroler&quot;];
+</code></pre>  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -113,7 +143,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://MrXiaoYang.github.io/2016/09/07/GIT终端命令/" data-title="GIT终端命令 | KeepOnline" data-tsina="null" class="share clearfix">
+	  <div data-url="http://MrXiaoYang.github.io/2016/09/20/从StoryBoard加载控制器/" data-title="从StoryBoard加载控制器 | KeepOnline" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -127,18 +157,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/09/07/提交苹果审核被拒原因总结/" title="提交苹果审核被拒原因总结">
+ <a href="/2016/09/20/Xib加载控制器的View/" title="Xib加载控制器的View">
   <strong>上一篇：</strong><br/>
   <span>
-  提交苹果审核被拒原因总结</span>
+  Xib加载控制器的View</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/09/06/GIT/"  title="GIT">
+<a href="/2016/09/20/UIWindow/"  title="UIWindow">
  <strong>下一篇：</strong><br/> 
- <span>GIT
+ <span>UIWindow
 </span>
 </a>
 </div>
