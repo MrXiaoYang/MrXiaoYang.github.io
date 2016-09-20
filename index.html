@@ -47,7 +47,7 @@
 				<h1 class="site-name"><a href="/" title="KeepOnline">KeepOnline</a></h1>
 				<h2 class="blog-motto">挂机打怪ing</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -63,7 +63,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:MrXiaoYang.github.io">
 					</form>
 					
@@ -81,6 +81,115 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/09/20/项目中常见的文件/" title="项目中常见的文件" itemprop="url">项目中常见的文件</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
+		
+  <p class="article-time">
+    <time datetime="2016-09-20T03:31:56.000Z" itemprop="datePublished"> Published 2016-09-20</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="01-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;-LaunchScreen"><a href="#01-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;-LaunchScreen" class="headerlink" title="01-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;(LaunchScreen)"></a>01-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;(LaunchScreen)</h3><pre><code>Xcode5
+    &#x6846;&#x67B6;&#x662F;&#x82F9;&#x679C;&#x4E8B;&#x5148;&#x5DF2;&#x7ECF;&#x5BFC;&#x5165;&#x8FDB;&#x53BB;&#x7684;.&#x5728;&#x9879;&#x76EE;&#x7684;&#x7ED3;&#x6784;&#x5F53;&#x4E2D;&#x5C31;&#x80FD;&#x591F;&#x770B;&#x5230;&#x5BFC;&#x5165;&#x7684;&#x6846;&#x67B6;.
+
+Xcode6
+    &#x4F1A;&#x81EA;&#x52A8;&#x5BFC;&#x5165;&#x4E00;&#x4E9B;&#x89C9;&#x89C1;&#x7684;&#x6846;&#x67B6;.&#x5728;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x5F53;&#x4E2D;,&#x770B;&#x4E0D;&#x5230;&#x5DF2;&#x7ECF;&#x5BFC;&#x5165;&#x7684;&#x6846;&#x67B6;.
+    LaunchScreen.xib:&#x7528;&#x6765;&#x8BBE;&#x7F6E;&#x542F;&#x52A8;&#x754C;&#x9762;.
+Xcode7
+    &#x4F1A;&#x81EA;&#x52A8;&#x5BFC;&#x5165;&#x4E00;&#x4E9B;&#x89C9;&#x89C1;&#x7684;&#x6846;&#x67B6;.&#x5728;&#x9879;&#x76EE;&#x7ED3;&#x6784;&#x5F53;&#x4E2D;,&#x770B;&#x4E0D;&#x5230;&#x5DF2;&#x7ECF;&#x5BFC;&#x5165;&#x7684;&#x6846;&#x67B6;.
+    LaunchScreen.storyBoard
+
+LaunchScreen&#x539F;&#x7406;:
+    &#x4F1A;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;LaunchScreen&#x662F;&#x56E0;&#x4E3A;&#x5728;Target&#x5F53;&#x4E2D;,&#x6307;&#x5B9A;&#x4E86;Launch Screen file,
+    &#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x7684;&#x8BDD;,&#x5C31;&#x4E0D;&#x4F1A;&#x53BB;&#x52A0;&#x8F7D;LaunchScreen&#x4F5C;&#x4E3A;&#x542F;&#x52A8;&#x754C;&#x9762;.
+
+    &#x5982;&#x679C;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x542F;&#x52A8;&#x56FE;&#x7247;,&#x6A21;&#x62DF;&#x5668;&#x9ED8;&#x8BA4;&#x7684;&#x5C3A;&#x5BF8;&#x5927;&#x5C0F;&#x662F;4s&#x7684;&#x5C3A;&#x5BF8;&#x5927;&#x5C0F;.(&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x5C4F;&#x5E55;&#x5C3A;&#x5BF8;&#x9A8C;&#x8BC1;.)
+    &#x6A21;&#x62DF;&#x5668;&#x9ED8;&#x8BA4;&#x7684;&#x5C3A;&#x5BF8;&#x662F;&#x7531;&#x542F;&#x52A8;&#x754C;&#x9762;&#x51B3;&#x5B9A;&#x7684;.
+    &#x5B83;&#x7684;&#x5E95;&#x5C42;&#x5B9E;&#x73B0;&#x5176;&#x5B9E;&#x628A;LaunchScreen&#x4E0A;&#x7684;&#x4E1C;&#x897F;,&#x751F;&#x6210;&#x4E86;&#x4E00;&#x5F20;&#x56FE;&#x7247;,&#x7136;&#x540E;&#x628A;&#x8FD9;&#x5F20;&#x56FE;&#x7247;&#x8BBE;&#x4E3A;&#x7A0B;&#x5E8F;&#x7684;&#x542F;&#x52A8;&#x56FE;&#x7247;.
+    &#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x6C99;&#x76D2;&#x5F53;&#x4E2D;&#x67E5;&#x770B;, 
+    &#x67E5;&#x770B;&#x65B9;&#x6CD5;,&#x627E;&#x5230;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6839;&#x76EE;&#x5F55;.
+    &#x83B7;&#x53D6;&#x65B9;&#x6CD5;: NSLog(@&quot;%@&quot;,NSHomeDirectory());
+    &#x6253;&#x5370;&#x51FA;&#x6765;,&#x540E;&#x524D;&#x5F80;&#x6587;&#x4EF6;&#x5939;.&#x627E;&#x5230;Library-&gt;Caches-&gt;Snapshots&#x76EE;&#x5F55;&#x4E0B;&#x9762;.&#x6700;&#x540E;&#x4E00;&#x5C42;&#x5C31;&#x662F;&#x7A0B;&#x5E8F;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x56FE;&#x7247;.
+</code></pre><h3 id="02-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;-info-plist"><a href="#02-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;-info-plist" class="headerlink" title="02-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;(info.plist)"></a>02-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;(info.plist)</h3><pre><code>Supporting file&#x4E00;&#x822C;&#x90FD;&#x662F;&#x653E;&#x4E9B;&#x8D44;&#x6E90;&#x6587;&#x4EF6;,&#x50CF;&#x4E00;&#x4E9B;plist&#x8FD9;&#x4E9B;&#x7B49;.
+xcode5&#x5F53;&#x4E2D;&#x4E5F;&#x6709;info.plist,&#x53EA;&#x4E0D;&#x8FC7;&#x5B83;&#x7684;&#x540D;&#x5B57;&#x5F88;&#x957F;.&#x662F;&#x5DE5;&#x7A0B;&#x7684;&#x540D;&#x79F0;.
+&#x5728;xcode5&#x5F53;&#x4E2D;,&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;pch&#x6587;&#x4EF6;,&#x5728;Xcode6&#x5F53;&#x4E2D;&#x4E0D;&#x4F1A;&#x5E2E;&#x6211;&#x4EEC;&#x751F;&#x6210;PCH&#x6587;&#x4EF6;.
+
+info.plist&#x5F53;&#x4E2D;&#x4FDD;&#x5B58;&#x7740;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x5F53;&#x4E2D;&#x57FA;&#x672C;&#x7684;&#x914D;&#x7F6E;.&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x5178;.&#x67E5;&#x770B;&#x5B83;&#x7684;&#x7C7B;&#x578B;.
+&#x8FD9;&#x4E2A;&#x5F53;&#x4E2D;,&#x4E3B;&#x8981;&#x638C;&#x63E1;&#x4E09;&#x4E2A;Key,
+Bundle Name:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x540D;&#x79F0;.
+Bundle version string,short:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x7248;&#x672C;.&#x5728;&#x5F00;&#x53D1;&#x5F53;&#x4E2D;&#x90FD;&#x662F;&#x8FED;&#x4EE3;&#x5F00;&#x53D1;.&#x82F9;&#x679C;&#x8981;&#x6C42;&#x4E0B;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x7248;&#x672C;&#x5FC5;&#x987B;&#x5F97;&#x8981;&#x6BD4;&#x4E0A;&#x4E00;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x7248;&#x672C;&#x8981;&#x9AD8;.
+
+Bundle Version:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;&#x7684;&#x7248;&#x672C;.
+Bundle identifier:&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6807;&#x8BC6;&#x7B26;.&#x4FDD;&#x8BC1;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x552F;&#x4E00;&#x6027;, 
+                   &#x5982;&#x679C;&#x4E24;&#x4E2A;&#x5E94;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x6807;&#x8BC6;&#x7B26;, &#x90A3;&#x4E48;&#x4E4B;&#x524D;&#x7684;&#x90A3;&#x4E2A;&#x5E94;&#x7528;&#x4F1A;&#x88AB;&#x5E72;&#x6389;.
+                   &#x4F5C;&#x7528;:&#x4E0A;&#x4F20;&#x5230;AppStore&#x7684;&#x65F6;&#x5019;&#x5FC5;&#x987B;&#x5F97;&#x8981;&#x6709;&#x6807;&#x8BC6;&#x7B26;.
+                           &#x5F53;&#x505A;&#x63A8;&#x9001;&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x5FC5;&#x987B;&#x5F97;&#x8981;Bundle identifier.
+Targets&#x5BF9;&#x5E94;&#x8005;info.plist.&#x6587;&#x4EF6;.    
+</code></pre><h3 id="03-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;-PCH"><a href="#03-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;-PCH" class="headerlink" title="03-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;(PCH)"></a>03-&#x9879;&#x76EE;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x6587;&#x4EF6;(PCH)</h3><pre><code>PCH&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;.&#x4E00;&#x822C;PCH&#x7684;&#x540D;&#x79F0;&#x8DDF;&#x9879;&#x76EE;&#x7684;&#x540D;&#x79F0;&#x76F8;&#x540C;.
+PCH&#x7684;&#x4F5C;&#x7528;:&#x5B58;&#x653E;&#x4E00;&#x4E9B;&#x516C;&#x7528;&#x7684;&#x5B8F;.
+          &#x5B58;&#x653E;&#x4E00;&#x4E9B;&#x516C;&#x7528;&#x7684;&#x6587;&#x4EF6;.
+&#x53EA;&#x8981;&#x5728;pch&#x5F53;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x4E1C;&#x897F;, &#x4F1A;&#x88AB;&#x6574;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5171;&#x4EAB;.
+PCH&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x9884;&#x7F16;&#x8BD1;&#x6587;&#x4EF6;,&#x8981;&#x544A;&#x8BC9;&#x7CFB;&#x7EDF;&#x8981;&#x63D0;&#x524D;&#x7F16;&#x8BD1;&#x5B83;.&#x8981;&#x53BB;&#x505A;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;.
+&#x5728;Buld Setting &#x5F53;&#x4E2D;&#x627E;perfix &#x627E;&#x5230;Precomplie prefix Header &#x4E3A;yes.
+&#x8BBE;&#x5B8C;&#x8FD9;&#x4E9B;&#x540E;,&#x518D;&#x8FDB;&#x884C;prefix Header&#x7684;&#x8DEF;&#x5F84;&#x914D;&#x7F6E;.&#x8DEF;&#x5F84;&#x4ECE;&#x6839;&#x5C42;&#x5F00;&#x59CB;.
+
+1.&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x5E38;&#x7528;&#x516C;&#x7528;&#x7684;&#x5B8F;.
+&#x7ECF;&#x5E38;&#x505A;&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x7684;&#x7248;&#x672C;&#x53F7;&#x7684;&#x5B8F;,
+&#x548C;&#x4E00;&#x4E9B;&#x5C4F;&#x5E55;&#x7684;&#x5B8F;.
+
+2.&#x5B58;&#x653E;&#x516C;&#x7528;&#x7684;&#x5934;&#x6587;&#x4EF6;.&#x5206;&#x7C7B;&#x7684;&#x5934;&#x6587;&#x4EF6;
+3.pch&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;Log.
+    &#x5728;&#x5B8F;&#x5F53;&#x4E2D;,&#x4E09;&#x4E2A;&#x70B9;...&#x8868;&#x793A;&#x53EF;&#x53D8;&#x53C2;&#x6570;.
+    &#x5728;&#x51FD;&#x6570;&#x5F53;&#x4E2D;,&#x8868;&#x793A;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x7528;:__VA_ARGS__
+    XMGLog(...) NSLog(__VA__ARGS__)
+
+    &#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x7BA1;&#x7406;,&#x76F4;&#x63A5;&#x6CE8;&#x91CA;&#x6389;.
+
+PCH:&#x6CE8;&#x610F;PCH&#x4F1A;&#x628A;&#x5B83;&#x5F53;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x5BFC;&#x5165;&#x5230;&#x5DE5;&#x7A0B;&#x5F53;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x6587;&#x4EF6;.&#x4F46;&#x5982;&#x679C;&#x5DE5;&#x7A0B;&#x5F53;&#x4E2D;&#x6709;C&#x8BED;&#x8A00;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;,&#x5B83;&#x4E5F;&#x662F;&#x4F1A;&#x628A;&#x5B83;&#x7ED9;&#x5BFC;&#x5165;&#x5230;C&#x8BED;&#x8A00;&#x7684;&#x6587;&#x4EF6;&#x5F53;&#x4E2D;.&#x5982;&#x679C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;, &#x5C31;&#x4F1A;&#x53D1;&#x751F;&#x9519;&#x8BEF;.
+
+&#x89E3;&#x51B3;&#x529E;&#x6CD5;:&#x6BCF;&#x4E00;&#x4E2A;OC&#x6587;&#x4EF6;&#x90FD;&#x4F1A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;__OBJC__&#x5B8F;,&#x53EA;&#x8981;&#x5224;&#x65AD;&#x6709;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x5B8F;,
+        &#x5C31;&#x80FD;&#x770B;&#x51FA;&#x662F;&#x4E0D;&#x662F;C&#x8BED;&#x8A00;&#x7684;&#x6587;&#x4EF6;,&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B9A;&#x4E49;&#x8FD9;&#x6837;&#x7684;&#x5B8F;, &#x90A3;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;.&#x5C31;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;.
+</code></pre>
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/09/19/iOS10适配资料/" title="iOS10适配资料" itemprop="url">iOS10适配资料</a>
   </h1>
   <p class="article-author">By
@@ -88,7 +197,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-19T09:26:18.000Z" itemprop="datePublished"> 发表于 2016-09-19</time>
+    <time datetime="2016-09-19T09:26:18.000Z" itemprop="datePublished"> Published 2016-09-19</time>
     
   </p>
 </header>
@@ -137,7 +246,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-19T08:46:46.000Z" itemprop="datePublished"> 发表于 2016-09-19</time>
+    <time datetime="2016-09-19T08:46:46.000Z" itemprop="datePublished"> Published 2016-09-19</time>
     
   </p>
 </header>
@@ -188,7 +297,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-19T08:35:27.000Z" itemprop="datePublished"> 发表于 2016-09-19</time>
+    <time datetime="2016-09-19T08:35:27.000Z" itemprop="datePublished"> Published 2016-09-19</time>
     
   </p>
 </header>
@@ -244,7 +353,7 @@
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-07T02:48:51.000Z" itemprop="datePublished"> 发表于 2016-09-07</time>
+    <time datetime="2016-09-07T02:48:51.000Z" itemprop="datePublished"> Published 2016-09-07</time>
     
   </p>
 </header>
@@ -481,7 +590,7 @@ Once this information is available, we can continue with the review of your app.
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-07T01:38:04.000Z" itemprop="datePublished"> 发表于 2016-09-07</time>
+    <time datetime="2016-09-07T01:38:04.000Z" itemprop="datePublished"> Published 2016-09-07</time>
     
   </p>
 </header>
@@ -531,7 +640,7 @@ Once this information is available, we can continue with the review of your app.
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-06T04:05:40.000Z" itemprop="datePublished"> 发表于 2016-09-06</time>
+    <time datetime="2016-09-06T04:05:40.000Z" itemprop="datePublished"> Published 2016-09-06</time>
     
   </p>
 </header>
@@ -1174,7 +1283,7 @@ viewcontroller&#x5220;&#x9664;&#x70B9;&#x4EE3;&#x7801;&#x540E;&#x63D0;&#x4EA4;&#
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-06T02:41:35.000Z" itemprop="datePublished"> 发表于 2016-09-06</time>
+    <time datetime="2016-09-06T02:41:35.000Z" itemprop="datePublished"> Published 2016-09-06</time>
     
   </p>
 </header>
@@ -1230,7 +1339,7 @@ viewcontroller&#x5220;&#x9664;&#x70B9;&#x4EE3;&#x7801;&#x540E;&#x63D0;&#x4EA4;&#
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-05T08:20:46.000Z" itemprop="datePublished"> 发表于 2016-09-05</time>
+    <time datetime="2016-09-05T08:20:46.000Z" itemprop="datePublished"> Published 2016-09-05</time>
     
   </p>
 </header>
@@ -1523,7 +1632,7 @@ switch (obj.transactionState) {
 		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-05T07:52:17.000Z" itemprop="datePublished"> 发表于 2016-09-05</time>
+    <time datetime="2016-09-05T07:52:17.000Z" itemprop="datePublished"> Published 2016-09-05</time>
     
   </p>
 </header>
@@ -1577,136 +1686,16 @@ switch (obj.transactionState) {
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/05/App打包测试/" title="App打包测试" itemprop="url">App打包测试</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="MrXiaoYang" target="_blank" itemprop="author">MrXiaoYang</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-05T07:28:19.000Z" itemprop="datePublished"> 发表于 2016-09-05</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="1-&#x8BC1;&#x4E66;&#x751F;&#x6210;-&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;-&#x8BC1;&#x4E66;&#x5B89;&#x88C5;"><a href="#1-&#x8BC1;&#x4E66;&#x751F;&#x6210;-&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;-&#x8BC1;&#x4E66;&#x5B89;&#x88C5;" class="headerlink" title="1.&#x8BC1;&#x4E66;&#x751F;&#x6210;/&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;/&#x8BC1;&#x4E66;&#x5B89;&#x88C5;"></a>1.&#x8BC1;&#x4E66;&#x751F;&#x6210;/&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x7684;&#x914D;&#x7F6E;/&#x8BC1;&#x4E66;&#x5B89;&#x88C5;</h2><p>#&#x56FE;&#xFF1A;</p>
-<h4 id="1-&#x91CD;&#x65B0;&#x751F;&#x6210;&#x6253;&#x5305;&#x6D4B;&#x8BD5;&#x8BC1;&#x4E66;-&#x786E;&#x5B9A;&#x54EA;&#x53F0;&#x673A;&#x5668;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;"><a href="#1-&#x91CD;&#x65B0;&#x751F;&#x6210;&#x6253;&#x5305;&#x6D4B;&#x8BD5;&#x8BC1;&#x4E66;-&#x786E;&#x5B9A;&#x54EA;&#x53F0;&#x673A;&#x5668;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;" class="headerlink" title="1. &#x91CD;&#x65B0;&#x751F;&#x6210;&#x6253;&#x5305;&#x6D4B;&#x8BD5;&#x8BC1;&#x4E66;(&#x786E;&#x5B9A;&#x54EA;&#x53F0;&#x673A;&#x5668;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;)"></a>1. &#x91CD;&#x65B0;&#x751F;&#x6210;&#x6253;&#x5305;&#x6D4B;&#x8BD5;&#x8BC1;&#x4E66;(&#x786E;&#x5B9A;&#x54EA;&#x53F0;&#x673A;&#x5668;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;)</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/1. &#x91CD;&#x65B0;&#x751F;&#x6210;&#x6253;&#x5305;&#x6D4B;&#x8BD5;&#x8BC1;&#x4E66;(&#x786E;&#x5B9A;&#x54EA;&#x53F0;&#x673A;&#x5668;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;" alt="1.&#x91CD;&#x65B0;&#x751F;&#x6210;&#x6253;&#x5305;&#x6D4B;&#x8BD5;&#x8BC1;&#x4E66;(&#x786E;&#x5B9A;&#x54EA;&#x53F0;&#x673A;&#x5668;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;)">.png)</p>
-<h4 id="2-&#x786E;&#x5B9A;&#x54EA;&#x4E2A;APP&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;"><a href="#2-&#x786E;&#x5B9A;&#x54EA;&#x4E2A;APP&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;" class="headerlink" title="2. &#x786E;&#x5B9A;&#x54EA;&#x4E2A;APP&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;"></a>2. &#x786E;&#x5B9A;&#x54EA;&#x4E2A;APP&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/2. &#x786E;&#x5B9A;&#x54EA;&#x4E2A;APP&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;.png" alt="2. &#x786E;&#x5B9A;&#x54EA;&#x4E2A;APP&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x6253;&#x5305;&#x6D4B;&#x8BD5;"></p>
-<h4 id="3-&#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;APP&#x6D4B;&#x8BD5;&#x5305;"><a href="#3-&#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;APP&#x6D4B;&#x8BD5;&#x5305;" class="headerlink" title="3. &#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;APP&#x6D4B;&#x8BD5;&#x5305;"></a>3. &#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;APP&#x6D4B;&#x8BD5;&#x5305;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/3. &#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;APP&#x6D4B;&#x8BD5;&#x5305;.png" alt="3. &#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;APP&#x6D4B;&#x8BD5;&#x5305;"></p>
-<h4 id="4-&#x6839;&#x636E;&#x524D;&#x4E09;&#x9879;&#x751F;&#x6210;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;"><a href="#4-&#x6839;&#x636E;&#x524D;&#x4E09;&#x9879;&#x751F;&#x6210;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;" class="headerlink" title="4. &#x6839;&#x636E;&#x524D;&#x4E09;&#x9879;&#x751F;&#x6210;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;"></a>4. &#x6839;&#x636E;&#x524D;&#x4E09;&#x9879;&#x751F;&#x6210;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/4. &#x6839;&#x636E;&#x524D;&#x4E09;&#x9879;&#x751F;&#x6210;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;.png" alt="4. &#x6839;&#x636E;&#x524D;&#x4E09;&#x9879;&#x751F;&#x6210;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;"></p>
-<h2 id="2-&#x6253;&#x5305;&#x6D4B;&#x8BD5;"><a href="#2-&#x6253;&#x5305;&#x6D4B;&#x8BD5;" class="headerlink" title="2.&#x6253;&#x5305;&#x6D4B;&#x8BD5;"></a>2.&#x6253;&#x5305;&#x6D4B;&#x8BD5;</h2><h4 id="5-0-&#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x9879;&#x76EE;BundleID"><a href="#5-0-&#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x9879;&#x76EE;BundleID" class="headerlink" title="5.0 &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x9879;&#x76EE;BundleID"></a>5.0 &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x9879;&#x76EE;BundleID</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/06 - &#x6253;&#x5305;&#x6D4B;&#x8BD5; - &#x6D4B;&#x8BD5;/5.0 &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x9879;&#x76EE;BundleID.png" alt="5.0 &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x9879;&#x76EE;BundleID"></p>
-<h4 id="5-1-&#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x68C0;&#x67E5;&#x5DE5;&#x4F5C;&#x8BC1;&#x4E66;&#x548C;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;"><a href="#5-1-&#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x68C0;&#x67E5;&#x5DE5;&#x4F5C;&#x8BC1;&#x4E66;&#x548C;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;" class="headerlink" title="5.1 &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x68C0;&#x67E5;&#x5DE5;&#x4F5C;&#x8BC1;&#x4E66;&#x548C;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;"></a>5.1 &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x68C0;&#x67E5;&#x5DE5;&#x4F5C;&#x8BC1;&#x4E66;&#x548C;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/06 - &#x6253;&#x5305;&#x6D4B;&#x8BD5; - &#x6D4B;&#x8BD5;/5.1 &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x68C0;&#x67E5;&#x5DE5;&#x4F5C;&#x8BC1;&#x4E66;&#x548C;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;.png" alt="5.1 &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;-&#x68C0;&#x67E5;&#x5DE5;&#x4F5C;&#x8BC1;&#x4E66;&#x548C;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;"></p>
-<h4 id="6-&#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;"><a href="#6-&#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;" class="headerlink" title="6. &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;"></a>6. &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/06 - &#x6253;&#x5305;&#x6D4B;&#x8BD5; - &#x6D4B;&#x8BD5;/6. &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;.png" alt="6. &#x5F00;&#x59CB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;"></p>
-<h4 id="7-&#x6253;&#x5305;&#x6210;&#x529F;-&#x5BFC;&#x51FA;"><a href="#7-&#x6253;&#x5305;&#x6210;&#x529F;-&#x5BFC;&#x51FA;" class="headerlink" title="7. &#x6253;&#x5305;&#x6210;&#x529F;,&#x5BFC;&#x51FA;"></a>7. &#x6253;&#x5305;&#x6210;&#x529F;,&#x5BFC;&#x51FA;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/06 - &#x6253;&#x5305;&#x6D4B;&#x8BD5; - &#x6D4B;&#x8BD5;/7. &#x6253;&#x5305;&#x6210;&#x529F;,&#x5BFC;&#x51FA;.png" alt="7. &#x6253;&#x5305;&#x6210;&#x529F;,&#x5BFC;&#x51FA;"></p>
-<h4 id="8-&#x6253;&#x5305;&#x6210;&#x529F;-&#x9009;&#x62E9;&#x5BFC;&#x51FA;&#x65B9;&#x6CD5;"><a href="#8-&#x6253;&#x5305;&#x6210;&#x529F;-&#x9009;&#x62E9;&#x5BFC;&#x51FA;&#x65B9;&#x6CD5;" class="headerlink" title="8. &#x6253;&#x5305;&#x6210;&#x529F;,&#x9009;&#x62E9;&#x5BFC;&#x51FA;&#x65B9;&#x6CD5;"></a>8. &#x6253;&#x5305;&#x6210;&#x529F;,&#x9009;&#x62E9;&#x5BFC;&#x51FA;&#x65B9;&#x6CD5;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/06 - &#x6253;&#x5305;&#x6D4B;&#x8BD5; - &#x6D4B;&#x8BD5;/8. &#x6253;&#x5305;&#x6210;&#x529F;,&#x9009;&#x62E9;&#x5BFC;&#x51FA;&#x65B9;&#x6CD5;.png" alt="8. &#x6253;&#x5305;&#x6210;&#x529F;,&#x9009;&#x62E9;&#x5BFC;&#x51FA;&#x65B9;&#x6CD5;"></p>
-<h4 id="9-&#x9009;&#x62E9;&#x5F00;&#x53D1;&#x56E2;&#x961F;-&#x7528;&#x4F5C;&#x63CF;&#x8FF0;"><a href="#9-&#x9009;&#x62E9;&#x5F00;&#x53D1;&#x56E2;&#x961F;-&#x7528;&#x4F5C;&#x63CF;&#x8FF0;" class="headerlink" title="9. &#x9009;&#x62E9;&#x5F00;&#x53D1;&#x56E2;&#x961F;,&#x7528;&#x4F5C;&#x63CF;&#x8FF0;"></a>9. &#x9009;&#x62E9;&#x5F00;&#x53D1;&#x56E2;&#x961F;,&#x7528;&#x4F5C;&#x63CF;&#x8FF0;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/06 - &#x6253;&#x5305;&#x6D4B;&#x8BD5; - &#x6D4B;&#x8BD5;/9. &#x9009;&#x62E9;&#x5F00;&#x53D1;&#x56E2;&#x961F;,&#x7528;&#x4F5C;&#x63CF;&#x8FF0;.png" alt="9. &#x9009;&#x62E9;&#x5F00;&#x53D1;&#x56E2;&#x961F;,&#x7528;&#x4F5C;&#x63CF;&#x8FF0;"></p>
-<h4 id="10-&#x9009;&#x62E9;APP&#x8BBE;&#x5907;&#x652F;&#x6301;"><a href="#10-&#x9009;&#x62E9;APP&#x8BBE;&#x5907;&#x652F;&#x6301;" class="headerlink" title="10. &#x9009;&#x62E9;APP&#x8BBE;&#x5907;&#x652F;&#x6301;"></a>10. &#x9009;&#x62E9;APP&#x8BBE;&#x5907;&#x652F;&#x6301;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/06 - &#x6253;&#x5305;&#x6D4B;&#x8BD5; - &#x6D4B;&#x8BD5;/10. &#x9009;&#x62E9;APP&#x8BBE;&#x5907;&#x652F;&#x6301;.png" alt="10. &#x9009;&#x62E9;APP&#x8BBE;&#x5907;&#x652F;&#x6301;"></p>
-<h4 id="11-&#x6253;&#x5305;&#x6982;&#x8FF0;"><a href="#11-&#x6253;&#x5305;&#x6982;&#x8FF0;" class="headerlink" title="11. &#x6253;&#x5305;&#x6982;&#x8FF0;"></a>11. &#x6253;&#x5305;&#x6982;&#x8FF0;</h4><p><img src="/2016/09/05/App&#x6253;&#x5305;&#x6D4B;&#x8BD5;/06 - &#x6253;&#x5305;&#x6D4B;&#x8BD5; - &#x6D4B;&#x8BD5;/11. &#x6253;&#x5305;&#x6982;&#x8FF0;.png" alt="11. &#x6253;&#x5305;&#x6982;&#x8FF0;"></p>
-<p>#&#x6587;&#x5B57;&#xFF1A;</p>
-<h3 id="&#x6D4B;&#x8BD5;&#x6253;&#x5305;"><a href="#&#x6D4B;&#x8BD5;&#x6253;&#x5305;" class="headerlink" title="&#x6D4B;&#x8BD5;&#x6253;&#x5305;"></a>&#x6D4B;&#x8BD5;&#x6253;&#x5305;</h3><ul>
-<li><p>1.&#x767B;&#x5F55;apple&#x7684;&#x5F00;&#x53D1;&#x8005;&#x4E3B;&#x9875;:developer.apple.com</p>
-</li>
-<li><p>2.&#x9009;&#x62E9;Ad Hoc&#x751F;&#x6210;&#x4E00;&#x4E2A;ios_distribution.cer: &#x8BA9;&#x7535;&#x8111;&#x5177;&#x5907;&#x6253;&#x5305;&#x7A0B;&#x5E8F;&#x7684;&#x80FD;&#x529B;</p>
-</li>
-<li><p>3.&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;App ID : &#x786E;&#x5B9A;&#x54EA;&#x4E2A;APP&#x53EF;&#x4EE5;&#x88AB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;</p>
-</li>
-<li><p>4.&#x5229;&#x7528;&#x7528;&#x6237;&#x8BBE;&#x5907;&#x7684;UDID&#x6CE8;&#x518C;&#x8BBE;&#x5907;(&#x786E;&#x5B9A;&#x54EA;&#x4E9B;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x88AB;&#x6253;&#x5305;&#x6D4B;&#x8BD5;)</p>
-</li>
-<li><p>5.&#x9009;&#x62E9;Ad Hoc&#x5229;&#x7528;ios_distribution.cer + &#x8BBE;&#x5907;UDID + App ID &#x2013;&gt; &#x63CF;&#x8FF0;&#x6587;&#x4EF6;<br>(&#x63CF;&#x8FF0;&#x6587;&#x4EF6;&#x7684;&#x4F5C;&#x7528;:</p>
-<ul>
-<li>1&gt; &#x80FD;&#x77E5;&#x9053;&#x5728;&#x54EA;&#x53F0;&#x7535;&#x8111;&#x4E0A;, &#x4E3A;&#x54EA;&#x53F0;&#x8BBE;&#x5907;&#x6253;&#x5305;&#x54EA;&#x4E2A;&#x7A0B;&#x5E8F;</li>
-<li>2&gt; &#x54EA;&#x53F0;&#x8BBE;&#x5907;&#x9700;&#x8981;&#x6D4B;&#x8BD5;&#x54EA;&#x4E2A;&#x7A0B;&#x5E8F;)</li>
-</ul>
-</li>
-<li><p>6.&#x6700;&#x7EC8;&#x4EA7;&#x751F;&#x4E86;3&#x4E2A;&#x6587;&#x4EF6;</p>
-<ul>
-<li><p>1&gt; CertificateSigningRequest.certSigningRequest</p>
-<ul>
-<li>&#x5305;&#x542B;&#x4E86;&#x7535;&#x8111;&#x7684;&#x4FE1;&#x606F;</li>
-<li>&#x53D1;&#x9001;&#x7ED9;&#x82F9;&#x679C;&#x670D;&#x52A1;&#x5668;, &#x82F9;&#x679C;&#x670D;&#x52A1;&#x5668;&#x6839;&#x636E;&#x6587;&#x4EF6;&#x4FE1;&#x606F;&#x6765;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x7535;&#x8111;&#x8BC1;&#x4E66;</li>
-<li>&#x751F;&#x6210;&#x7684;&#x8BC1;&#x4E66;&#x5C31;&#x53EF;&#x4EE5;&#x8BA9;&#x5BF9;&#x5E94;&#x7684;&#x7535;&#x8111;&#x5177;&#x5907;&#x67D0;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x80FD;&#x529B;</li>
-</ul>
-</li>
-<li><p>2&gt; ios_distribution.cer</p>
-<ul>
-<li>&#x6253;&#x5305;&#x8BC1;&#x4E66;</li>
-<li>&#x5B89;&#x88C5;&#x8FD9;&#x4E2A;&#x8BC1;&#x4E66;&#x540E;, &#x7535;&#x8111;&#x5C31;&#x5177;&#x5907;&#x6253;&#x5305;&#x7A0B;&#x5E8F;&#x7684;&#x80FD;&#x529B;</li>
-</ul>
-</li>
-<li><p>3&gt; nj_iphone6_news.mobileprovision</p>
-<ul>
-<li>&#x91CC;&#x9762;&#x5305;&#x542B;&#x4E86;3&#x4E2A;&#x4FE1;&#x606F;:ios_distribution.cer + &#x8BBE;&#x5907;UDID + App ID</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>7.&#x5B89;&#x88C5;&#x8BC1;&#x4E66;&#x548C;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</p>
-<ul>
-<li>1&gt; ios_distribution.cer</li>
-<li>2&gt; nj_iphone6_news.mobileprovision</li>
-</ul>
-</li>
-<li><p>8.&#x9879;&#x76EE;Scheme&#x53F3;&#x8FB9;&#x7684;&#x8BBE;&#x5907;&#x9009;&#x62E9;iOS Device</p>
-</li>
-<li><p>9.&#x70B9;&#x51FB;Xcode&#x7684;&#x83DC;&#x5355;</p>
-<ul>
-<li>Product &#x2013;&gt; Archive &#x2013;&gt; Distribute &#x2013;&gt; &#x2026;.Ad Hoc&#x2026; &#x2013;&gt; &#x9009;&#x62E9;&#x5BF9;&#x5E94;&#x7684;&#x63CF;&#x8FF0;&#x6587;&#x4EF6;</li>
-</ul>
-</li>
-<li><p>10.&#x751F;&#x6210;&#x4E00;&#x4E2A;ipa&#x6587;&#x4EF6;,&#x53D1;&#x7ED9;&#x6D4B;&#x8BD5;&#x4EBA;&#x5458;&#x548C;&#x5BA2;&#x6237;</p>
-<ul>
-<li>ipa&#x672C;&#x8D28;&#x662F;zip</li>
-<li>android&#x7684;&#x5B89;&#x88C5;&#x5305;&#x662F;APK&#x683C;&#x5F0F;,&#x672C;&#x8D28;&#x4E5F;&#x662F;zip</li>
-</ul>
-</li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -1717,7 +1706,7 @@ switch (obj.transactionState) {
   
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -1739,11 +1728,11 @@ switch (obj.transactionState) {
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
 </div>
 
@@ -1893,7 +1882,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
